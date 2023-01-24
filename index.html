@@ -1,25 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!DOCTYPE html> <!-- Traditionally indicates version of HTML used (here: HTML 5) -->
+<html lang="en"> <!-- Document Root Element -->
+<!-- Info about document -->
 <head>
-	<meta charset="utf-8" />
-	<meta name="description" content="Simple demo Web page for CSE 134B" />
-	<meta name="keywords" content="HTML, CSS, JavaScript" />
-	<meta name="author" content="" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>CSE 134B Homework 1 Website</title>
-	<link href="images/favicon.ico" rel="icon" />
-	<link href="styles/main.css" rel="stylesheet" />
-	<script>
-		window.addEventListener('load', function () {
-			let time = window.performance.timing,
-				complete = time.domComplete - time.domLoading;
-			document.getElementById('page-load-info').innerHTML = `<strong>Page Loaded in ${parseInt(complete)}ms
-			 on ${new Date().toLocaleString("en-US")}</strong>`;
-		});
-	</script>
+	<meta charset="utf-8" /> <!-- Always set character set first -->
+	<meta name="description" content="Simple Web page for HW2 in CSE 134B" />
+	<title>CSE 134B Homework 2 Website</title> <!-- Document title is mandatory -->
 </head>
 
+<!-- Document Content and Markup -->
 <body>
 	<header>
 		<h1>CSE 134B Homework 1 Website</h1>
@@ -28,7 +16,7 @@
 
 	<footer>
 		<hr/>
-		<p>💯This page was made with &hearts; by YOUR NAME HERE 💯</p>
+		<p>This page was made with &hearts; by Yngvil Skomedal</p>
 	</footer>
 
 </body>
