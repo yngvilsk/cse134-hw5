@@ -143,10 +143,28 @@
                 <source src="audio/rick-roll.mp3">
                 <strong>Your browser does not support the audio tag.</strong>
             </audio>
-            <p>Video:</p>
+            <p>Here is a video I created in a course called Visual Communication during fall 2022 about Scrum:</p>
             <video width="30%" controls src="audio/video.mp4">
                 <strong> Video element not supperted </strong>
             </video>
+            <p>Now I drew the first letter in my name using the <code>canvas</code>tag:</p>
+            <canvas id="myCanvas" width="200" height="100">
+                Your browser does not support the canvas tag.
+            </canvas>
+            <script>
+                var canvas = document.getElementById("myCanvas");
+                var ctx = canvas.getContext("2d");
+                ctx.fillStyle = "#FFFFE0";
+                ctx.moveTo(0, 0);
+                ctx.lineTo(100, 50);
+                ctx.stroke();
+                ctx.moveTo(100, 50);
+                ctx.lineTo(200, 0);
+                ctx.stroke();
+                ctx.moveTo(100, 50);
+                ctx.lineTo(100, 100);
+                ctx.stroke();
+            </script>
 
         </section>
 
