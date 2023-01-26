@@ -8,12 +8,13 @@
 	<title>Yngvil Skomedal</title> <!-- Document title is mandatory -->
     <link href="images/favicon.png" rel="icon"/>
     <script>
-        document.innerHTML = `Hello, nice to see you!`;
+        document.getElementByID('page-load-info').innerHTML = `Hello, nice to see you!`;
     </script>
 </head>
 <style>
     table, th, td {
         padding: 10px;
+        border: none;
     }
 </style>
 <!-- Document Content and Markup -->
@@ -41,7 +42,7 @@
         </section>
         <section>
             <h2>My CV</h2>
-            <table cellspacing="0" cellpadding="0">
+            <table>
                 <thead>
                     <tr>
                         <th colspan="2">Contact Info</th>
