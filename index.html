@@ -8,12 +8,7 @@
 	<title>Yngvil Skomedal</title> <!-- Document title is mandatory -->
     <link href="images/favicon.png" rel="icon"/>
     <script>
-        window.addEventListener('load', function () {
-			let time = window.performance.timing,
-				complete = time.domComplete - time.domLoading;
-			document.getElementById('page-load-info').innerHTML = `<strong>Page Loaded in ${parseInt(complete)}ms
-			 on ${new Date().toLocaleString("en-US")}</strong>`;
-		});
+		document.write.innerHTML = `Hello! Please hire me :)`;
     </script>
 </head>
 <style>
@@ -39,7 +34,7 @@
             <p> Hello! My name is <span style="color:cadetblue"> Yngvil Skomedal </span>and I study <strong>Computer Science</strong>. I am <em>passionate</em> about UI.</p>
             <picture>
                 <source media="(min-width:650px)" srcset="images/homepage-picture.jpg">
-                <img src="images/cv-picture.JPG" width="20%" heigth="20%"/>
+                <img src="images/cv-picture.JPG"/>
             </picture>
             <aside>
                 <p> Currently I am an exchange student at <i>UCSD</i>!</p>
