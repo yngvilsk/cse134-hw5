@@ -154,7 +154,7 @@
             <script>
                 var canvas = document.getElementById("myCanvas");
                 var ctx = canvas.getContext("2d");
-                ctx.moveTo(25, 25);
+                ctx.moveTo(50, 25);
                 ctx.lineTo(100, 50);
                 ctx.stroke();
                 ctx.moveTo(100, 50);
@@ -166,14 +166,26 @@
             </script>
             <p>Here is a SVG</p>
             <svg width="100" height="100">
-                <circle cx="50" cy="50" r="40" fill="lightyellow" />
+                <circle cx="50" cy="50" r="40" fill="lightgoldenrodyellow" />
             </svg>
-            <svg width="75" height="75">
-                <circle cx="50" cy="50" r="40" fill="lightyellow" />
+            <svg width="100" height="100">
+                <circle cx="50" cy="50" r="30" fill="lightgoldenrodyellow" />
             </svg>
-            <svg width="50" height="50">
-                <circle cx="50" cy="50" r="40" fill="lightyellow" />
+            <svg width="100" height="100">
+                <circle cx="50" cy="50" r="20" fill="lightgoldenrodyellow" />
             </svg>
+            <p>Here is an optgroup</p>
+            <label for="cars">Choose a car:</label>
+            <select  name="cars" id="cars">
+              <optgroup label="Swedish Cars">
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+              </optgroup>
+              <optgroup label="German Cars">
+                <option value="mercedes">Mercedes</option>
+                <option value="audi">Audi</option>
+              </optgroup>
+            </select>
 
         </section>
 
