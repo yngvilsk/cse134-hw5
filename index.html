@@ -175,8 +175,8 @@
                 <circle cx="50" cy="50" r="20" fill="lightgoldenrodyellow" />
             </svg>
             <p>Here is an <code>optgroup</code> example</p>
-            <label for="cars">What do you want to know about me:</label>
-            <select>
+            <label for="selection">What do you want to know about me:</label>
+            <select name="selection">
               <optgroup label="Education">
                 <option value="university">University</option>
                 <option value="gap-year">Folkehøgskole (gap year)</option>
@@ -188,13 +188,14 @@
               </optgroup>
             </select>
             <p>Here is an example of usage of the <code>form</code> tag</p>
-            <form>
-                <b>What do you want to know about me:/b>
-                <br>
-                <input type="checkbox" name="technology">
-                <label for="technology">Technology</label>
-                <input type="checkbox" name="experience">
+            <label for="radiobuttons">What do you want to know about me:</label>
+            <form name="radiobuttons">
+                <label for="education">Education</label>
+                <input type="checkbox" name="education">
                 <label for="experience">Experience</label>
+                <input type="checkbox" name="experience">
+                <label for="technology">Technology</label>
+                <input type="checkbox" name="technology">
                 <input type="checkbox" name="interests">
                 <label for="interests">Interests</label>
             </form>
