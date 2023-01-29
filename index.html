@@ -147,7 +147,7 @@
             <video width="30%" controls src="audio/video.mp4">
                 <strong> Video element not supperted </strong>
             </video>
-            <p>Now I drew the first letter in my name using the <code>canvas</code>tag:</p>
+            <p>Now I drew the first letter in my name using the <code>canvas</code> tag:</p>
             <canvas id="myCanvas" width="200" height="100">
                 Your browser does not support the canvas tag.
             </canvas>
@@ -164,7 +164,7 @@
                 ctx.lineTo(100, 100);
                 ctx.stroke();
             </script>
-            <p>Here is a SVG</p>
+            <p>Here is a <code>svg</code> tag</p>
             <svg width="100" height="100">
                 <circle cx="50" cy="50" r="40" fill="lightgoldenrodyellow" />
             </svg>
@@ -174,18 +174,30 @@
             <svg width="100" height="100">
                 <circle cx="50" cy="50" r="20" fill="lightgoldenrodyellow" />
             </svg>
-            <p>Here is an optgroup</p>
-            <label for="cars">Choose a car:</label>
-            <select  name="cars" id="cars">
-              <optgroup label="Swedish Cars">
-                <option value="volvo">Volvo</option>
-                <option value="saab">Saab</option>
+            <p>Here is an <code>optgroup</code> example</p>
+            <label for="cars">What do you want to know about me:</label>
+            <select>
+              <optgroup label="Education">
+                <option value="university">University</option>
+                <option value="gap-year">Folkehøgskole (gap year)</option>
+                <option value="high-school">High School</option>
               </optgroup>
-              <optgroup label="German Cars">
-                <option value="mercedes">Mercedes</option>
-                <option value="audi">Audi</option>
+              <optgroup label="Experience">
+                <option value="Bouvet">Internship at Bouvet</option>
+                <option value="Equinor">Internship at Equinor</option>
               </optgroup>
             </select>
+            <p>Here is an example of usage of the <code>form</code> tag</p>
+            <form>
+                <b>What do you want to know about me:/b>
+                <br>
+                <input type="checkbox" name="technology">
+                <label for="technology">Technology</label>
+                <input type="checkbox" name="experience">
+                <label for="experience">Experience</label>
+                <input type="checkbox" name="interests">
+                <label for="interests">Interests</label>
+            </form>
 
         </section>
 
