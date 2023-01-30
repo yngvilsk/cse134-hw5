@@ -136,18 +136,18 @@
                 L   I   V   E
                         E
             </pre></p>
-            <p>Here is an example of iframe:</p>
+            <h3>Here is an example of iframe:</h3>
             <iframe frameborder="0" src="https://www.ucsd.edu"></iframe>
             <p>Audio:</p>
             <audio controls>
                 <source src="audio/rick-roll.mp3">
                 <strong>Your browser does not support the audio tag.</strong>
             </audio>
-            <p>Here is a video I created in a course called Visual Communication during fall 2022 about Scrum:</p>
+            <h3>Here is a video I created in a course called Visual Communication during fall 2022 about Scrum:</h3>
             <video width="30%" controls src="audio/video.mp4">
                 <strong> Video element not supperted </strong>
             </video>
-            <p>Now I drew the first letter in my name using the <code>canvas</code> tag:</p>
+            <h3>Now I drew the first letter in my name using the <code>canvas</code> tag:</h3>
             <canvas id="myCanvas" width="200" height="100">
                 Your browser does not support the canvas tag.
             </canvas>
@@ -164,7 +164,7 @@
                 ctx.lineTo(100, 100);
                 ctx.stroke();
             </script>
-            <p>Here is a <code>svg</code> tag</p>
+            <h3>Here is a <code>svg</code> tag</h3>
             <svg width="100" height="100">
                 <circle cx="50" cy="50" r="40" fill="lightgoldenrodyellow" />
             </svg>
@@ -174,7 +174,7 @@
             <svg width="100" height="100">
                 <circle cx="50" cy="50" r="20" fill="lightgoldenrodyellow" />
             </svg>
-            <p>Here is an <code>optgroup</code> example</p>
+            <h3>Here is an <code>optgroup</code> example</h3>
             <label for="selection">What do you want to know about me:</label>
             <select name="selection">
               <optgroup label="Education">
@@ -187,7 +187,7 @@
                 <option value="Equinor">Internship at Equinor</option>
               </optgroup>
             </select>
-            <p>Here is an example of usage of the <code>form</code> tag</p>
+            <h3>Here is an example of usage of the <code>form</code> tag</h3>
             <label for="radiobuttons">What do you want to know about me:</label>
             <form name="radiobuttons">
                 <label for="education">Education</label>
@@ -196,9 +196,20 @@
                 <input type="checkbox" name="experience">
                 <label for="technology">Technology</label>
                 <input type="checkbox" name="technology">
-                <input type="checkbox" name="interests">
                 <label for="interests">Interests</label>
+                <input type="checkbox" name="interests">
             </form>
+            <h3>Here is another usage of the <code>form</code> tag</h3>
+            <form action="/form-handler" method="POST">
+                <fieldset>
+                    <legend>Send me a file:</legend>
+                    <label for="upload-file">Upload file</label>
+                    <input type="text" name="upload-file">
+                    <button type="submit">Submit</button>
+                </fieldset>
+
+            </form>
+
 
         </section>
 
