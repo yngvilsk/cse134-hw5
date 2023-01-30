@@ -129,7 +129,7 @@
         </section>
         <section>
             <h2>Playground</h2>
-            <p>This is where I test different kinds of code! It is going to be more fun than just <code> console.log('Hello World!')</code>. But it may also be as simple as this poem:
+            <p>This is where I test different kinds of code! It is going to be more fun than just <textarea> <p>Hello World!</p></textarea>. But it may also be as simple as this poem:
             <pre>
                         L
                         O    
@@ -208,6 +208,15 @@
                 </fieldset>
 
             </form>
+            <h3>Datalist</h3>
+            <label for="themes">Choose a theme to read more about</label>
+            <input list="theme" name="themes">
+
+            <datalist id="theme">
+                <option value="Frontend">
+                <option value="Backend">
+                <option value="Teamwork">
+            </datalist>
 
 
         </section>
