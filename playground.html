@@ -14,7 +14,7 @@
         <nav>
             <a href="index.html">Home</a> 
             <a href="about-me.html">About me</a> 
-            <a href="my-cv.html">My CV</a>
+            <a href="my-resume.html">My CV</a>
             <a href="playground.html">Playground</a>
         </nav>
         <hr/>
@@ -22,6 +22,107 @@
 	<main>
         <section>
             <h2>Playground</h2>
+            <p>This is where I test different kinds of code! It is going to be more fun than just <code>console.log('Hello World!')</code>. But it may also be as simple as this poem:
+            <pre>
+                        L
+                        O    
+                L   I   V   E
+                        E
+            </pre></p>
+            <h3>Here is an example of iframe:</h3>
+            <iframe frameborder="0" src="https://www.ucsd.edu"></iframe>
+            <h3>Audio:</h3>
+            <audio controls>
+                <source src="audio/rick-roll.mp3">
+                <strong>Your browser does not support the audio tag.</strong>
+            </audio>
+            <h3>Here is a video I created in a course called Visual Communication during fall 2022 about Scrum:</h3>
+            <video width="30%" controls src="audio/video.mp4">
+                <strong> Video element not supperted </strong>
+            </video>
+            <h3>Now I drew the first letter in my name using the <code>canvas</code> tag:</h3>
+            <canvas id="myCanvas" width="200" height="100">
+                Your browser does not support the canvas tag.
+            </canvas>
+            <script>
+                var canvas = document.getElementById("myCanvas");
+                var ctx = canvas.getContext("2d");
+                ctx.moveTo(50, 25);
+                ctx.lineTo(100, 50);
+                ctx.stroke();
+                ctx.moveTo(100, 50);
+                ctx.lineTo(150, 25);
+                ctx.stroke();
+                ctx.moveTo(100, 50);
+                ctx.lineTo(100, 100);
+                ctx.stroke();
+            </script>
+            <h3>Here is a <code>svg</code> tag</h3>
+            <svg width="100" height="100">
+                <circle cx="50" cy="50" r="40" fill="lightgoldenrodyellow" />
+            </svg>
+            <svg width="100" height="100">
+                <circle cx="50" cy="50" r="30" fill="lightgoldenrodyellow" />
+            </svg>
+            <svg width="100" height="100">
+                <circle cx="50" cy="50" r="20" fill="lightgoldenrodyellow" />
+            </svg>
+            <h3>Here is an <code>optgroup</code> example</h3>
+            <label for="selection">What do you want to know about me:</label>
+            <select name="selection">
+              <optgroup label="Education">
+                <option value="university">University</option>
+                <option value="gap-year">Folkehøgskole (gap year)</option>
+                <option value="high-school">High School</option>
+              </optgroup>
+              <optgroup label="Experience">
+                <option value="Bouvet">Internship at Bouvet</option>
+                <option value="Equinor">Internship at Equinor</option>
+              </optgroup>
+            </select>
+            <h3>Here is an example of usage of the <code>form</code> tag</h3>
+            <label for="radiobuttons">What do you want to know about me:</label>
+            <form name="radiobuttons">
+                <label for="education">Education</label>
+                <input type="checkbox" name="education">
+                <label for="experience">Experience</label>
+                <input type="checkbox" name="experience">
+                <label for="technology">Technology</label>
+                <input type="checkbox" name="technology">
+                <label for="interests">Interests</label>
+                <input type="checkbox" name="interests">
+            </form>
+            <h3>Here is another usage of the <code>form</code> tag</h3>
+            <form action="/form-handler" method="POST">
+                <fieldset>
+                    <legend>Send me a file:</legend>
+                    <label for="upload-file">Upload file</label>
+                    <button name="upload-file" type="submit">Submit</button>
+                </fieldset>
+
+            </form>
+            <h3>Datalist</h3>
+            <label for="themes">Choose a theme to read more about</label>
+            <input list="theme" name="themes">
+
+            <datalist id="theme">
+                <option value="Frontend">
+                <option value="Backend">
+                <option value="Teamwork">
+            </datalist>
+            <h3>Textarea</h3>
+            <form action="/form-handler" method="POST">
+                <label for="contact-me">Please send me a message:</label>
+                <textarea name="contact-me" cols="30" rows="4"></textarea>
+                <button name="submit-message" type="submit">Submit</button>
+            </form>
+            <h3>Template</h3>
+            <p>This is before the template</p>
+            <template>
+                <!-- This is a nice place to put markup fragments for custom elements -->
+                <p>This does not show in the browser. I could also hold some content here that would be displayed if I for example used JavaScript within a script tag</p>
+            </template>
+            <p>This is after the template</p>
         </section>
 
     </main>
@@ -32,7 +133,7 @@
         <a href=“https://no.linkedin.com/in/yngvil-skomedal-3494821a0”>LinkedIn</a>
         <a href="https://github.com/yngvilsk">GitHub</a>
 
-
+        <a target="_blank" href="https://icons8.com/icon/17135/xbox-y">Xbox Y</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
 	</footer>
 
 </body>
