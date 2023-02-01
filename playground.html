@@ -4,7 +4,9 @@
 <head>
 	<meta charset="utf-8" /> <!-- Always set character set first -->
 	<meta name="description" content="Simple Web page for HW2 in CSE 134B" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Yngvil Skomedal</title> <!-- Document title is mandatory -->
+    <link href="images/favicon.png" rel="icon"/>
 </head>
 
 <!-- Document Content and Markup -->
@@ -18,26 +20,27 @@
             <a href="playground.html">Playground</a>
         </nav>
         <hr/>
+    </header>
 
 	<main>
         <section>
             <h2>Playground</h2>
-            <p>This is where I test different kinds of code! It is going to be more fun than just <code>console.log('Hello World!')</code>. But it may also be as simple as this poem:
+            <p>This is where I test different kinds of code! It is going to be more fun than just <code>console.log('Hello World!')</code>. But it may also be as simple as this poem: </p>
             <pre>
                         L
                         O    
                 L   I   V   E
                         E
-            </pre></p>
+            </pre>
             <h3>Here is an example of iframe:</h3>
-            <iframe frameborder="0" src="https://www.ucsd.edu"></iframe>
+            <iframe src="https://www.ucsd.edu"></iframe>
             <h3>Audio:</h3>
             <audio controls>
                 <source src="audio/rick-roll.mp3">
                 <strong>Your browser does not support the audio tag.</strong>
             </audio>
             <h3>Here is a video I created in a course called Visual Communication during fall 2022 about Scrum:</h3>
-            <video width="30%" controls src="audio/video.mp4">
+            <video width="100" controls src="audio/video.mp4">
                 <strong> Video element not supperted </strong>
             </video>
             <h3>Now I drew the first letter in my name using the <code>canvas</code> tag:</h3>
@@ -68,8 +71,8 @@
                 <circle cx="50" cy="50" r="20" fill="lightgoldenrodyellow" />
             </svg>
             <h3>Here is an <code>optgroup</code> example</h3>
-            <label for="selection">What do you want to know about me:</label>
-            <select name="selection">
+            <label for="select-info">What do you want to know about me:</label>
+            <select name="select-info" id="select-info">
               <optgroup label="Education">
                 <option value="university">University</option>
                 <option value="gap-year">Folkehøgskole (gap year)</option>
@@ -81,29 +84,29 @@
               </optgroup>
             </select>
             <h3>Here is an example of usage of the <code>form</code> tag</h3>
-            <label for="radiobuttons">What do you want to know about me:</label>
-            <form name="radiobuttons">
+            <form name="radiobuttons-info" id="radiobuttons-info">
+                <label>What do you want to know about me:</label>
                 <label for="education">Education</label>
-                <input type="checkbox" name="education">
+                <input type="checkbox" name="education" id="education">
                 <label for="experience">Experience</label>
-                <input type="checkbox" name="experience">
+                <input type="checkbox" name="experience" id="experience">
                 <label for="technology">Technology</label>
-                <input type="checkbox" name="technology">
+                <input type="checkbox" name="technology" id="technology">
                 <label for="interests">Interests</label>
-                <input type="checkbox" name="interests">
+                <input type="checkbox" name="interests" id="interests">
             </form>
             <h3>Here is another usage of the <code>form</code> tag</h3>
             <form action="/form-handler" method="POST">
                 <fieldset>
                     <legend>Send me a file:</legend>
                     <label for="upload-file">Upload file</label>
-                    <button name="upload-file" type="submit">Submit</button>
+                    <button name="upload-file" id="upload-file" type="submit">Submit</button>
                 </fieldset>
 
             </form>
             <h3>Datalist</h3>
             <label for="themes">Choose a theme to read more about</label>
-            <input list="theme" name="themes">
+            <input list="theme" name="themes" id="themes">
 
             <datalist id="theme">
                 <option value="Frontend">
@@ -113,7 +116,7 @@
             <h3>Textarea</h3>
             <form action="/form-handler" method="POST">
                 <label for="contact-me">Please send me a message:</label>
-                <textarea name="contact-me" cols="30" rows="4"></textarea>
+                <textarea name="contact-me" id="contact-me" cols="30" rows="4"></textarea>
                 <button name="submit-message" type="submit">Submit</button>
             </form>
             <h3>Template</h3>
