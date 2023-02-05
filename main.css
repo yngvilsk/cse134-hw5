@@ -1,0 +1,19 @@
+body {
+    background-color: #F2F2F2;
+}
+
+h1 {
+    color: black;
+    text-align: left;
+    font: Helvetica;
+}
+
+p {
+    color: black;
+    text-align: center;
+    font: sans-serif;
+}
+
+nav {
+    color: #E3C876;
+}
