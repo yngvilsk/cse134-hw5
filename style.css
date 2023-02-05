@@ -5,13 +5,13 @@ body {
 h1 {
     color: black;
     text-align: left;
-    font: Helvetica;
+    font-family: Helvetica, Arial; 
 }
 
 p {
     color: black;
     text-align: center;
-    font: sans-serif;
+    font-family: Arial, Helvetica;
 }
 
 header {
