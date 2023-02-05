@@ -28,7 +28,7 @@ a:hover {
     color: #EC4F3C; 
 }
 
-a:focus {
+nav .active {
     font-weight: bold;
 }
 
