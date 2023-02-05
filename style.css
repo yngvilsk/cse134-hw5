@@ -28,11 +28,11 @@ a:hover {
     color: #EC4F3C; 
 }
 
-a:active {
+a:focus {
     font-weight: bold;
 }
 
-p.strong {
+strong {
     font-weight: bold;
 }
 
