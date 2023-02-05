@@ -22,6 +22,8 @@ p {
 a {
     text-decoration: none;
     color: black;
+    font-family: 'Roboto', Helvetica, Arial, sans-serif; 
+    text-align: right;
 }
 
 a:hover {
