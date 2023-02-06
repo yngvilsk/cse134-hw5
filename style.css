@@ -12,6 +12,7 @@ body {
     background-color: #F2F2F2;
 }
 
+/* Head row */
 header {
     background-color: #E3C876;
     grid-area: head;
@@ -27,6 +28,39 @@ h1 {
     font-family: 'Roboto', Helvetica, Arial, sans-serif; 
     font-weight: bold;
 }
+
+nav {
+    grid-area: navigation;
+}
+
+nav .active {
+    font-weight: bold;
+}
+
+/* Content row */
+
+main {
+    grid-area: content;
+    display: grid; /* Nested grid */
+    grid-template-columns: 1 fr 1fr;
+    grid-template-areas: 'text picture';
+}
+
+#homepage-text {
+    grid-area: text;
+}
+
+#homepage-pic {
+    grid-area: picture;
+}
+
+/* Foot row */
+
+footer{
+    grid-area: foot;
+}
+
+/* Other styling */
 
 p {
     color: black;
@@ -45,27 +79,7 @@ a:hover {
     color: #EC4F3C; 
 }
 
-nav {
-    grid-area: navigation;
-}
-
-nav .active {
-    font-weight: bold;
-}
-
 strong {
     font-weight: bold;
 }
 
-#homepage-text {
-    grid-area: content;
-}
-
-#homepage-pic {
-    grid-area: content;
-
-}
-
-footer{
-    grid-area: foot;
-}
