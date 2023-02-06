@@ -12,6 +12,7 @@ body {
 
 header {
     background-color: #E3C876;
+    grid-area: head;
 }
 
 h1 {
@@ -42,8 +43,6 @@ a:hover {
 
 nav {
     grid-area: head;
-    grid-column-start: 2;
-    grid-column-end: 4;
 }
 
 nav .active {
@@ -56,14 +55,11 @@ strong {
 
 #homepage-text {
     grid-area: middle;
-    grid-column-start: 1;
-    grid-column-end: 2;
 }
 
 #homepage-pic {
     grid-area: middle;
-    grid-column-start: 3;
-    grid-column-end: 4;
+
 }
 
 footer{
