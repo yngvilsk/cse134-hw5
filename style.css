@@ -4,7 +4,7 @@
 body {
     display: grid;  /* Defines the element as a grid container */
     grid-template-columns: 1fr;
-    grid-template-rows: 56px 1fr 56px;
+    grid-template-rows: 56px auto 56px;
     grid-template-areas: 
         'head'
         'content'
@@ -15,9 +15,9 @@ body {
 header {
     background-color: #E3C876;
     grid-area: head;
-    grid-row: 1;
-    grid-column-start: 1;
-    grid-column-end: 3;
+    display: grid; /* Nested grid */
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'title navigation';
 }
 
 h1 {
@@ -46,7 +46,7 @@ a:hover {
 }
 
 nav {
-    grid-area: nav;
+    grid-area: navigation;
 }
 
 nav .active {
