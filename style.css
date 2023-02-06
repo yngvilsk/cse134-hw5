@@ -1,12 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand');
 @import url('http://fonts.googleapis.com/css?family=Roboto');
-@import url('https://fonts.googleapis.com/css2?family=Mansalva');
 
 body {
+    display: grid;  /* Defines the element as a grid container */
+    grid-template: 
+        'header header header header' 50px
+        'middle middle middle middle' 150px
+        'footer footer footer footer' 50px / 20px 200px 50px ;
     background-color: #F2F2F2;
 }
 
 h1 {
+    grid-area: 'header';
+    grid-column-start: 1;
     color: black;
     text-align: left;
     font-family: 'Roboto', Helvetica, Arial, sans-serif; 
@@ -30,16 +36,18 @@ a:hover {
     color: #EC4F3C; 
 }
 
+nav {
+    grid-area: 'header';
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+
 nav .active {
     font-weight: bold;
 }
 
 strong {
     font-weight: bold;
-}
-
-aside {
-    font-family: 'Mansalva', sans-serif;
 }
 
 header {
