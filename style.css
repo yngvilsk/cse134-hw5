@@ -4,15 +4,19 @@
 body {
     display: grid;  /* Defines the element as a grid container */
     grid-template: 
-        'header header header header' 50px
-        'middle middle middle middle' 150px
-        'footer footer footer footer' 50px / 20px 200px 50px ;
+        'head head head head' 64px
+        'middle middle middle middle' auto
+        'foot foot foot foot' 54px;
     background-color: #F2F2F2;
 }
 
+header {
+    background-color: #E3C876;
+}
+
 h1 {
-    grid-area: 'header';
-    grid-column-start: 1;
+    grid-area: head;
+    /*grid-column-start: 1; */
     color: black;
     text-align: left;
     font-family: 'Roboto', Helvetica, Arial, sans-serif; 
@@ -37,9 +41,9 @@ a:hover {
 }
 
 nav {
-    grid-area: 'header';
-    grid-column-start: 2;
-    grid-column-end: 4;
+    grid-area: head;
+    /*grid-column-start: 2;
+    grid-column-end: 4;*/
 }
 
 nav .active {
@@ -48,8 +52,4 @@ nav .active {
 
 strong {
     font-weight: bold;
-}
-
-header {
-    background-color: #E3C876;
 }
