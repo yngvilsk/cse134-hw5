@@ -19,6 +19,7 @@ header {
     display: grid; /* Nested grid */
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 'title navigation';
+    margin: 0;
 }
 
 h1 {
