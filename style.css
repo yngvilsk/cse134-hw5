@@ -4,7 +4,7 @@
 body {
     display: grid;  /* Defines the element as a grid container */
     grid-template-columns: 1fr;
-    grid-template-rows: 56px auto 56px;
+    grid-template-rows: 64px auto 64px;
     grid-template-areas: 
         'head'
         'content'
