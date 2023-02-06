@@ -43,6 +43,7 @@ a:hover {
 
 nav {
     grid-area: head;
+    grid-column-start: 3;
 }
 
 nav .active {
