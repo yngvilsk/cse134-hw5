@@ -39,7 +39,7 @@ nav .active {
 
 /* Content row */
 
-main {
+#homepage {
     grid-area: content;
     display: grid; /* Nested grid */
     grid-template-columns: 1 fr 1fr;
