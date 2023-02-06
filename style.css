@@ -4,7 +4,7 @@
 body {
     display: grid;  /* Defines the element as a grid container */
     grid-template: 
-        'head head head head' 
+        'title title nav nav' 
         'middle middle middle middle' 
         'foot foot foot foot';
     background-color: #F2F2F2;
@@ -12,14 +12,13 @@ body {
 
 header {
     background-color: #E3C876;
-    grid-area: head;
+    grid-row: 1;
     grid-column-start: 1;
     grid-column-end: 5;
 }
 
 h1 {
-    grid-column-start: 1;
-    grid-column-end: 3;
+    grid-area: title;
     color: black;
     text-align: left;
     font-family: 'Roboto', Helvetica, Arial, sans-serif; 
@@ -44,8 +43,7 @@ a:hover {
 }
 
 nav {
-    grid-column-start: 3;
-    grid-column-end: 5;
+    grid-area: nav;
 }
 
 nav .active {
