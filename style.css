@@ -4,9 +4,9 @@
 body {
     display: grid;  /* Defines the element as a grid container */
     grid-template: 
-        'head head head head' 64px
-        'middle middle middle middle' auto
-        'foot foot foot foot' 54px / 20% 20% 20% 20%;
+        'head head head head'
+        'middle middle middle middle' 
+        'foot foot foot foot';
     background-color: #F2F2F2;
 }
 
