@@ -3,18 +3,21 @@
 
 body {
     display: grid;  /* Defines the element as a grid container */
-    grid-template: 
-        'title title nav nav' 
-        'middle middle middle middle' 
-        'foot foot foot foot';
+    grid-template-columns: 1fr;
+    grid-template-rows: 56px 1fr 56px;
+    grid-template-areas: 
+        'head'
+        'content'
+        'foot';
     background-color: #F2F2F2;
 }
 
 header {
     background-color: #E3C876;
+    grid-area: head;
     grid-row: 1;
     grid-column-start: 1;
-    grid-column-end: 5;
+    grid-column-end: 3;
 }
 
 h1 {
@@ -55,11 +58,11 @@ strong {
 }
 
 #homepage-text {
-    grid-area: middle;
+    grid-area: content;
 }
 
 #homepage-pic {
-    grid-area: middle;
+    grid-area: content;
 
 }
 
