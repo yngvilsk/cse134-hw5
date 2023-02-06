@@ -18,7 +18,8 @@ header {
 }
 
 h1 {
-    grid-area: head; 
+    grid-column-start: 1;
+    grid-column-end: 3;
     color: black;
     text-align: left;
     font-family: 'Roboto', Helvetica, Arial, sans-serif; 
@@ -41,12 +42,12 @@ a {
 a:hover {
     color: #EC4F3C; 
 }
-/*
+
 nav {
-    grid-area: head;
     grid-column-start: 3;
+    grid-column-end: 5;
 }
-*/
+
 nav .active {
     font-weight: bold;
 }
