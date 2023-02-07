@@ -69,7 +69,7 @@ nav li {
 }
 
 #homepage-text-container {
-    width: calc(30em * 0.75); /* The number you multiply with depends on what font it is, and how much a character takes up in a em square. */
+    width: calc(30em * 2); /* The number you multiply with depends on what font it is, and how much a character takes up in a em square. */
     margin-left: 30px;
     padding-right: 5px; 
     background-color: white;
