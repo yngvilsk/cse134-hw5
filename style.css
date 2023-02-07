@@ -69,9 +69,9 @@ nav li {
 }
 
 #homepage-text p {
-    max-width: calc(30em * 0.5); 
+    max-width: 300px; 
     white-space: nowrap; /* paragraph to one line */
-    overflow:hidden; /* older browsers */
+    overflow: hidden; /* older browsers */
 }
 
 #homepage-pic {
