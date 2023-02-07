@@ -18,26 +18,23 @@ body {
 header {
     background-color: #E3C876;
     grid-area: head;
-    display: grid; /* Nested grid */
-    align-items: start;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: 'title navigation';
+    display: flex; /* Defines the element as a flexbox container */
+    flex-direction: row; /* Specifies the direction that the items within the container flow. */
+    justify-content: space-between;  /* Flexbox: Determines the horizontal spacing of the items. Aligns along the main axis of the current line */
     padding: 0.7rem 0;
-    justify-content: space-between;
+
 }
 
 h1 {
-    grid-area: title;
+    order: 1;
     color: black;
     font-family: 'Roboto', Helvetica, Arial, sans-serif; 
     font-weight: bold;
     font-size: 1.5rem;
-    align-self: flex-end;
 }
 
 nav {
-    grid-area: navigation;
-    align-self: flex-start;
+    order: 2;
 }
 
 nav .active {
