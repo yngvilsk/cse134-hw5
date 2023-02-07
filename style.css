@@ -65,6 +65,7 @@ nav li {
 
 #homepage-text {
     grid-area: text;
+    justify-self: end; /* Aligns grid items along the inline (row) axis */
     background-color: #e6d7ff;
     margin-left: 30px;
 }
@@ -73,15 +74,14 @@ nav li {
     width: calc(30em * 2); /* The number you multiply with depends on what font it is, and how much a character takes up in a em square. */
     padding-right: 5px; 
     background-color: white;
-    justify-items: end; /* Aligns grid items along the inline (row) axis */
 }
 
 #homepage-pic {
     grid-area: picture;
+    justify-self: start; /* Aligns grid items along the inline (row) axis */
 }
 
 #homepage-pic picture{
-    justify-items: start; /* Aligns grid items along the inline (row) axis */
     align-items: center; /* Aligns grid items along the block (column) axis */
     margin-right: 30px;
     padding-left: 5px;
