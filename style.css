@@ -65,20 +65,23 @@ nav li {
 #homepage-text {
     grid-area: text;
     justify-items: end; /* Aligns grid items along the inline (row) axis */
-    align-items: center; /* Aligns grid items along the block (column) axis */
-    margin-left: 30px;
-    padding-right: 5px;
     background-color: #e6d7ff;
 }
 
 #homepage-text p {
     max-height: calc(30em * 2);
     max-width: calc(30em * 0.75); /* The number you multiply with depends on what font it is, and how much a character takes up in a em square. */
+    margin-left: 30px;
+    padding-right: 5px;
+    align-items: center; /* Aligns grid items along the block (column) axis */
 
 }
 
 #homepage-pic {
     grid-area: picture;
+}
+
+#homepage-pic picture{
     justify-items: start; /* Aligns grid items along the inline (row) axis */
     align-items: center; /* Aligns grid items along the block (column) axis */
     margin-right: 30px;
