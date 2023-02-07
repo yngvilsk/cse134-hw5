@@ -66,12 +66,15 @@ nav li {
     grid-area: text;
     justify-items: end; /* Aligns grid items along the inline (row) axis */
     align-items: center; /* Aligns grid items along the block (column) axis */
-    max-width: calc(30em * 0.75); /* The number you multiply with depends on what font it is, and how much a character takes up in a em square. */
-    max-height: calc(30em * 2);
     margin-left: 30px;
     padding-right: 5px;
     background-color: #e6d7ff;
-    
+}
+
+#homepage-text p {
+    max-height: calc(30em * 2);
+    max-width: calc(30em * 0.75); /* The number you multiply with depends on what font it is, and how much a character takes up in a em square. */
+
 }
 
 #homepage-pic {
