@@ -40,13 +40,13 @@ nav .active {
     font-weight: bold;
 }
 
-nav > ul {
+nav ul {
     list-style-type: none; /* Removes the bullets */
     margin: 0; /* Removes browser default settings */
     padding: 0; /* Removes browser default settings */
 }
 
-nav > li {
+nav li {
     padding-left: 10px;
     display: inline;
 }
