@@ -58,16 +58,26 @@ nav li {
 #homepage {
     grid-area: content;
     display: grid; /* Nested grid */
-    grid-template-columns: 1 fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas: 'text picture';
 }
 
 #homepage-text {
     grid-area: text;
+    justify-items: end; /* Aligns grid items along the inline (row) axis */
+    align-items: center; /* Aligns grid items along the block (column) axis */
+}
+
+#homepage-text p {
+    max-width: calc(30em * 0.5); 
+    white-space: nowrap; /* paragraph to one line */
+    overflow:hidden; /* older browsers */
 }
 
 #homepage-pic {
     grid-area: picture;
+    justify-items: start; /* Aligns grid items along the inline (row) axis */
+    align-items: center; /* Aligns grid items along the block (column) axis */
 }
 
 /* Foot row */
