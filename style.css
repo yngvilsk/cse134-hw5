@@ -4,7 +4,7 @@
 body {
     display: grid;  /* Defines the element as a grid container */
     grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: 64px 1fr auto;
     grid-template-areas: 
         'head'
         'content'
@@ -60,6 +60,8 @@ nav li {
     display: grid; /* Nested grid */
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 'text picture';
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 #homepage-text {
@@ -73,6 +75,7 @@ nav li {
     grid-area: picture;
     justify-items: start; /* Aligns grid items along the inline (row) axis */
     align-items: center; /* Aligns grid items along the block (column) axis */
+    padding-right: 10px;
 }
 
 /* Foot row */
