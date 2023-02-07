@@ -25,12 +25,8 @@ header {
 
 }
 
-h1 {
+#header-title {
     order: 1;
-    color: black;
-    font-family: 'Roboto', Helvetica, Arial, sans-serif; 
-    font-weight: bold;
-    font-size: 1.5rem;
     align-self: flex-end; /* set the vertical alignment for an individual item */
 }
 
@@ -105,3 +101,9 @@ strong {
     font-weight: bold;
 }
 
+h1 {
+    color: black;
+    font-family: 'Roboto', Helvetica, Arial, sans-serif; 
+    font-weight: bold;
+    font-size: 1.5rem;
+}
