@@ -60,22 +60,24 @@ nav li {
     display: grid; /* Nested grid */
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 'text picture';
-    padding-left: 30px;
-    padding-right: 30px;
 }
 
 #homepage-text {
     grid-area: text;
-    justify-items: end; /* Aligns grid items along the inline (row) axis */
+    justify-items: start; /* Aligns grid items along the inline (row) axis */
     align-items: center; /* Aligns grid items along the block (column) axis */
-    max-width: calc(30em * 0.5);
+    max-width: calc(30em * 0.75); /* The number you multiply with depends on what font it is, and how much a character takes up in a em square. */
+    margin-left: 30px;
+    padding-right: 5px;
+    background-color: #e6d7ff;
 }
 
 #homepage-pic {
     grid-area: picture;
     justify-items: start; /* Aligns grid items along the inline (row) axis */
     align-items: center; /* Aligns grid items along the block (column) axis */
-    padding-right: 10px;
+    margin-right: 30px;
+    padding-left: 5px;
 }
 
 /* Foot row */
