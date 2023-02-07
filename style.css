@@ -31,10 +31,12 @@ h1 {
     font-family: 'Roboto', Helvetica, Arial, sans-serif; 
     font-weight: bold;
     font-size: 1.5rem;
+    align-self: flex-end; /* set the vertical alignment for an individual item */
 }
 
 nav {
     order: 2;
+    align-self: flex-end; /* set the vertical alignment for an individual item */
 }
 
 nav .active {
