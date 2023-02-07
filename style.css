@@ -66,14 +66,13 @@ nav li {
 #homepage-text {
     grid-area: text;
     justify-self: end; /* Aligns grid items along the inline (row) axis */
-    background-color: #e6d7ff;
     margin-left: 30px;
 }
 
 #homepage-text-container {
     width: calc(30em * 0.9); /* The number you multiply with depends on what font it is, and how much a character takes up in a em square. */
     padding-right: 5px; 
-    background-color: white;
+    background-color: #e6d7ff;
 }
 
 #homepage-pic {
