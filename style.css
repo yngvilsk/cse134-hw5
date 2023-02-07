@@ -66,11 +66,7 @@ nav li {
     grid-area: text;
     justify-items: end; /* Aligns grid items along the inline (row) axis */
     align-items: center; /* Aligns grid items along the block (column) axis */
-}
-
-#homepage-text p {
-    max-width: 70ch; /* Max 70 characters in one line */
-    word-wrap: break-word;
+    max-width: calc(30em * 0.5);
 }
 
 #homepage-pic {
