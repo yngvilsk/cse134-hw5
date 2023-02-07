@@ -10,8 +10,8 @@ body {
         'content'
         'foot';
     background-color: #F2F2F2;
-    height: 100dvh;
-    width: 100dvw;
+    height: 100dvh; /* 100% of the vieport heigth */
+    width: 100dvw; /* 100% of the vieport width */
 }
 
 /* Head row */
@@ -29,14 +29,15 @@ header {
 h1 {
     grid-area: title;
     color: black;
-    text-align: left;
     font-family: 'Roboto', Helvetica, Arial, sans-serif; 
     font-weight: bold;
     font-size: 1.5rem;
+    align-self: flex-end;
 }
 
 nav {
     grid-area: navigation;
+    align-self: flex-start;
 }
 
 nav .active {
@@ -63,8 +64,23 @@ nav .active {
 /* Foot row */
 
 footer{
+    display: grid;
     grid-area: foot;
     padding: 0.7rem 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+        'links'
+        'goodbye';
+    place-items: center;
+}
+
+#footer-contact {
+    grid-area: links;
+}
+
+#footer-end {
+    grid-area: goodbye;
 }
 
 /* Other styling */
