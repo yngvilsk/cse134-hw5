@@ -22,7 +22,6 @@ header {
     flex-direction: row; /* Specifies the direction that the items within the container flow. */
     justify-content: space-between;  /* Flexbox: Determines the horizontal spacing of the items. Aligns along the main axis of the current line */
     padding: 0.7rem 0;
-
 }
 
 #header-title {
@@ -32,7 +31,7 @@ header {
 
 nav {
     order: 2;
-    align-self: flex-end; /* set the vertical alignment for an individual item */
+    align-self: center; /* set the vertical alignment for an individual item */
 }
 
 nav .active {
