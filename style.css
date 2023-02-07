@@ -70,10 +70,11 @@ nav li {
 }
 
 #homepage-text-container {
-    width: 200px;
+    width: 100px;
     max-width: calc(30em * 0.75); /* The number you multiply with depends on what font it is, and how much a character takes up in a em square. */
     margin-left: 30px;
     padding-right: 5px; 
+    background-color: white;
 }
 
 #homepage-pic {
