@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand');
 @import url('http://fonts.googleapis.com/css?family=Roboto');
 
-body {
+.main {
     display: grid;  /* Defines the element as a grid container */
     grid-template-columns: 1fr;
-    grid-template-rows: 64px auto 64px;
+    grid-template-rows: auto 1fr auto;
     grid-template-areas: 
         'head'
         'content'
@@ -21,7 +21,6 @@ header {
     display: flex; /* Defines the element as a flexbox container */
     flex-direction: row; /* Specifies the direction that the items within the container flow. */
     justify-content: space-between;  /* Flexbox: Determines the horizontal spacing of the items. Aligns along the main axis of the current line */
-    padding: 0.7rem 0;
 }
 
 #header-title {
@@ -36,7 +35,7 @@ nav {
     margin-right: 30px;
 }
 
-nav .active {
+.active {
     font-weight: bold;
 }
 
@@ -53,35 +52,27 @@ nav li {
 
 
 
-/* Content row */
+/* Homepage */
 
 #homepage {
     grid-area: content;
-    display: grid; /* Nested grid */
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: 'text picture';
-    align-items: center; /* Aligns grid items along the block (column) axis */
+    display: flex; /* Flexbox container */
+    flex-direction: row;
+    justify-content: center; /* Determines the horizontal spacing of the items. */
+    align-items: center; /* Determines the vertical alignment of the items */
+    gap: 10px;
 }
 
 #homepage-text {
-    grid-area: text;
-    justify-self: end; /* Aligns grid items along the inline (row) axis */
-    margin-left: 30px;
-}
-
-#homepage-text-container {
     width: calc(30em * 0.9); /* The number you multiply with depends on what font it is, and how much a character takes up in a em square. */
     padding-right: 5px; 
     background-color: #e6d7ff;
+    margin-left: 30px;
+    border-radius: 10px;
+    padding: 10px;
 }
 
 #homepage-pic {
-    grid-area: picture;
-    justify-self: start; /* Aligns grid items along the inline (row) axis */
-}
-
-#homepage-pic picture{
-    align-items: center; /* Aligns grid items along the block (column) axis */
     margin-right: 30px;
     padding-left: 5px;
 }
@@ -89,30 +80,21 @@ nav li {
 /* Foot row */
 
 footer{
-    display: grid;
     grid-area: foot;
+    display: flex;
     padding: 0.7rem 0;
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
-    grid-template-areas: 
-        'links'
-        'goodbye';
-    place-items: center;
-}
-
-#footer-contact {
-    grid-area: links;
-}
-
-#footer-end {
-    grid-area: goodbye;
+    flex-direction: column;
+    justify-content: center; /* Determines the horizontal spacing of the items. */
+    align-items: center; 
+    background-color: #D3D3D3;
 }
 
 /* Other styling */
 
-p {
+p, li, summary {
     color: black;
-    text-align: center;
+    text-align: left;
     font-family: 'Quicksand', Verdana, sans-serif;
 }
 
@@ -135,5 +117,99 @@ h1 {
     color: black;
     font-family: 'Roboto', Helvetica, Arial, sans-serif; 
     font-weight: bold;
+    font-size: 2rem;
+}
+
+h2 {
+    color: black;
+    font-family: 'Roboto', Helvetica, Arial, sans-serif; 
+    font-weight: bold;
     font-size: 1.5rem;
 }
+
+h3 {
+    color: black;
+    font-family: 'Roboto', Helvetica, Arial, sans-serif; 
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+
+/* My Resume Page */
+
+.resume-page {
+    display: grid; /* Grid container */
+    justify-content: right; /* Determines the horizontal spacing of the items. */
+    align-items: center; /* Determines the vertical alignment of the items */
+    grid-template: auto 1fr;
+    grid-gap: 0.3rem;
+    margin: 0;
+    background-color: #EC4F3C;
+}
+
+.resume-sidebar {
+    grid-column: 1 / 2;
+    background-color: #e6d7ff;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+.resume-content {
+    grid-column: 2 / 3;
+    display: flex;
+    flex-direction: column;
+}
+
+#resume-experience {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    row-gap: 10px;
+    flex-flow: row wrap;
+}
+
+
+#equinor {
+    background-color: #e6d7ff;
+    padding: 10px;
+    border-radius: 10px;
+    width: calc(30em * 0.9);
+    border-right: 5px;
+}
+
+#bouvet {
+    background-color: #e6d7ff;
+    padding: 10px;
+    border-radius: 10px;
+    width: calc(30em * 0.9);
+    border-left: 5px;
+}
+
+
+details {
+    width: calc(30em * 0.9);
+}
+
+td {
+    text-align: left;
+    font-family: 'Quicksand', Verdana, sans-serif;
+    padding: 15px;
+    width: calc(30em * 0.9); /* The number you multiply with depends on what font it is, and how much a character takes up in a em square. */
+}
+
+.education-when {
+    width: 150px;
+    font-style: italic;
+    font-size: smaller;
+}
+
+
+summary {
+    padding: 5px;
+    font-weight: bold;
+    width: calc(30em * 0.9);
+}
+

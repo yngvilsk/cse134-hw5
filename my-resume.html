@@ -13,104 +13,136 @@
 <!-- Document Content and Markup -->
 <body>
 	<header>
-		<h1>Yngvil Skomedal</h1>
+        <section id="header-title">
+            <h1>Yngvil Skomedal</h1>
+        </section>
         <nav>
-            <a href="index.html">Home</a> 
-            <a href="about-me.html">About me</a> 
-            <a href="my-resume.html" class="active">My CV</a>
-            <a href="playground.html">Playground</a>
+            <ul>
+                <li><a href="index.html">Home</a> </li>
+                <li><a href="about-me.html">About me</a></li>
+                <li><a href="my-resume.html" class="active">My Resume</a></li>
+                <li><a href="playground.html">Playground</a></li>
+            </ul>
         </nav>
-        <hr/>
     </header>
 
-	<main>
-        <section>
-            <h2>My resume</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th colspan="2">Contact Info</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><img src="images/cv-picture.jpg" width="100" alt="Portrait picture of me"/></td>
-                        <td>
-                            <p>
-                                <b>Mail: </b> yngvilks@stud.ntnu.no <br />
-                                <b>Phone: </b> 93 45 89 53 <br />
-                            </p>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <table>
-                <caption><h3>Education</h3></caption>
-                <colgroup>
-                    <col style="background-color:lightgoldenrodyellow">
-                    <col style="background-color:lightyellow">
-                </colgroup>
-                <thead>
-                    <tr>
-                        <th>When</th>
-                        <th>What</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>August 2019 -</td>
-                        <td> <b>Computer Science, NTNU Trondheim </b><br/>
-                            I am a fourth year student at the 5-year civil engineering study, a study that prepares me to work with the technologies of the future.
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>August 2018 - May 2019</td>
-                        <td><b>Exotic Outdoor Life, Valdres Folkehøgskole</b> <br/>
-                            This was a year full of mountain and tenting trips. It was especially exciting to get to know and communicate with so many different people, as well as to test my own limits
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>August 2015 - June 2018</td>
-                        <td><b>St. Olav videregående skole, Stavanger</b> <br/>
-                            I completed high school with specialization in science. During autumn 2016, I ex- changed to France for four weeks. Here, I lived with a french family and went to french school. The biggest lesson from this trip was how to be solution oriented when com- munication is difficult.
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <h3>Programming Technologies</h3>
-            <ul>
-                <li>
-                    Java
-                </li>
-                <li>
-                    C++
-                </li>
-                <li>
-                    Python
-                </li>
-                <li>
-                    React
-                </li>
-                <li>
-                    Flutter
-                </li>
-            </ul>
-            <h3>Interesting School Projects:</h3>
-            <details>
-                <summary>Elevator lab</summary>
-                <p>In this project my lab partner and I devopled the logic behind a simple elevator using C.</p>
-            </details>
+	<main class="resume-page">
+        <aside class="resume-sidebar">
+            <section id="resume-details">
+                <img src="images/cv-picture.jpg" width="160" alt="Portrait picture of me"/>
+                <table>
+                    <thead>
+                        <th colspan="2"><h3>Details:</h3></th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Degree:</td>
+                            <td>4th year Computer Science</td>
+                        </tr>
+                        <tr>
+                            <td>Speciality:</td>
+                            <td>Software Developement</td>
+                        </tr>
+                        <tr>
+                            <td>Mail:</td>
+                            <td> yngvilks@stud.ntnu.no</td>
+                        </tr>
+                        <tr>
+                            <td>Phone:</td>
+                            <td>047 93 45 89 53</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section id="resume-skills">
+                <label for="hard-skills"><h3>Hard skills</h3></label>
+                <ul id="hard-skills">
+                    <li>Java </li>                    
+                    <li>C++ </li>
+                    <li>Python</li>
+                    <li>React</li>
+                    <li>Flutter</li>
+                </ul>
+                <label for="soft-skills"><h3>Soft skills</h3></label>
+                <ul id="soft-skills">
+                    <li>I love to optimalize solutions</li>
+                    <li>I am a structured person</li>
+                    <li>I thrive when discussing different solutions to a problem</li>
+                    <li>Sporty</li>
+                </ul>
+            </section>
+        </aside>
+        <section class="resume-content">
+            <h2>My Resume</h2>
+            <section id="resume-education">
+                <h3>Education</h3>
+                <table>
+                    <colgroup>
+                        <col style="background-color:lightgoldenrodyellow">
+                        <col style="background-color:lightyellow">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <td class="education-when">August 2019 –</td>
+                            <td> <b>Computer Science, NTNU Trondheim </b><br/>
+                                I am a fourth year student at the 5-year civil engineering study, a study that prepares me to work with the technologies of the future.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="education-when">August 2018 - May 2019</td>
+                            <td><b>Exotic Outdoor Life, Valdres Folkehøgskole</b> <br/>
+                                This was a year full of mountain and tenting trips. It was especially exciting to get to know and communicate with so many different people, as well as to test my own limits
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="education-when">August 2015 - June 2018</td>
+                            <td><b>St. Olav videregående skole, Stavanger</b> <br/>
+                                I completed high school with specialization in science. During autumn 2016, I ex- changed to France for four weeks. Here, I lived with a french family and went to french school. The biggest lesson from this trip was how to be solution oriented when com- munication is difficult.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <h3>Experience</h3>
+            <section id="resume-experience">
+                <section id="equinor">
+                    <h4>Summer Intern at Equinor</h4>
+                    <h5>Summer 2021</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+                </section>
+                <section id="bouvet">
+                    <h4>Summer Intern at Bouvet</h4>
+                    <h5>Summer 2022</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+                </section>
+            </section>
+            <section id="resume-projects">
+                <h3>Interesting School Projects:</h3>
+                <details>
+                    <summary>Elevator lab</summary>
+                    <p>In this project my lab partner and I devopled the logic behind a simple elevator using C.</p>
+                </details>
+                <details>
+                    <summary>Computer Science Project 1</summary>
+                    <p>In this project I wokred in a team. We created a simple app to track the fotball league.</p>
+                </details>
+                <details>
+                    <summary>Software developement</summary>
+                    <p>In this project Scrum was the main focus. We worked in a team of six, and created a rexipe website using React.</p>
+                </details>
+            </section>
         </section>
-
     </main>
 
 	<footer>
 		<hr/>
-		<p>This page was made with &hearts; by Yngvil Skomedal</p>
-        <a href=“https://no.linkedin.com/in/yngvil-skomedal-3494821a0”>LinkedIn</a>
-        <a href="https://github.com/yngvilsk">GitHub</a>
-
-        <a target="_blank" href="https://icons8.com/icon/17135/xbox-y">Xbox Y</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+        <section id="footer-contact">
+            <a href=“https://no.linkedin.com/in/yngvil-skomedal-3494821a0”>LinkedIn</a>
+            <a href="https://github.com/yngvilsk">GitHub</a>
+        </section>
+        <section id="footer-end">
+            <p>This page was made with &hearts; by Yngvil Skomedal</p>
+        </section>
 	</footer>
 
 </body>
