@@ -199,16 +199,18 @@ h5 {
     flex-direction: column;
     padding-left: 20px;
     padding-right: 20px;
-    max-width: 200px;
+    max-width: 250px;
 }
 
 #resume-details {
     justify-self: center;
     align-self: center;
+    font-size: small;
+    line-height: 50%;
 }
 
 #resume-details img{
-    border-radius: 50%;
+    border-radius: 20%;
     padding-top: 10px;;
 }
 
