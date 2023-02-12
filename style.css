@@ -322,6 +322,9 @@ summary {
     flex-direction: row;
     flex-flow: flex wrap;
     justify-content: center;
+}
+
+#about-me-hobbies p {
     background-color: lightyellow;
     padding: 10px;
     border-radius: 10px;
