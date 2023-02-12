@@ -39,17 +39,38 @@ nav {
     font-weight: bold;
 }
 
-nav ul {
+nav ul li{
     list-style-type: none; /* Removes the bullets */
     margin: 0; /* Removes browser default settings */
-    padding: 0; /* Removes browser default settings */
-}
-
-nav li {
     padding-left: 10px;
-    display: inline;
+    display: inline-block;
 }
 
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Roboto', Helvetica, Arial, sans-serif; 
+}
+
+nav ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #EC4F3C;
+    margin: auto;
+    display: block;
+    transition: 0.5s;
+}
+
+nav ul li:hover::after{
+    width: 100%
+
+}
+
+a:hover {
+    color: #EC4F3C; 
+}
 
 
 /* Homepage */
@@ -70,6 +91,35 @@ nav li {
     margin-left: 30px;
     border-radius: 10px;
     padding: 10px;
+}
+
+#homepage-text h2 {
+    animation: wiggle 2s linear;
+}
+
+/* Keyframe */
+@keyframes wiggle {
+    0%, 7% {
+        transform: rotateZ(0);
+    }
+    15% {
+        transform: rotateZ(-5deg);
+    }
+    20% {
+        transform: rotateZ(5deg);
+    }
+    25% {
+        transform: rotateZ(-5deg);
+    }
+    30% {
+        transform: rotateZ(5deg);
+    }
+    35% {
+        transform: rotateZ(-5deg);
+    }
+    40%, 100% {
+        transform: rotateZ(0);
+    }
 }
 
 #homepage-pic {
@@ -96,17 +146,6 @@ p, li, summary {
     color: black;
     text-align: left;
     font-family: 'Quicksand', Verdana, sans-serif;
-}
-
-a {
-    text-decoration: none;
-    color: black;
-    font-family: 'Roboto', Helvetica, Arial, sans-serif; 
-    text-align: right;
-}
-
-a:hover {
-    color: #EC4F3C; 
 }
 
 strong {
@@ -267,7 +306,7 @@ summary {
 .about-me-intro{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     flex-flow: flex wrap;
 }
 
@@ -283,5 +322,6 @@ summary {
     padding: 10px;
     border-radius: 10px;
     width: calc(30em * 0.8);
+    align-self: center;
 }
 
