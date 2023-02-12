@@ -322,7 +322,7 @@ summary {
     flex-direction: row;
     flex-flow: flex wrap;
     justify-content: center;
-    gap: 10px ;
+    gap: 20px ;
 }
 
 #about-me-hobbies p {
