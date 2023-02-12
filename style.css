@@ -203,8 +203,8 @@ h5 {
 }
 
 #resume-details {
-    justify-content: center;
-    align-content: center;
+    justify-self: center;
+    align-self: center;
 }
 
 #resume-details img{
