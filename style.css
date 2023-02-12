@@ -318,10 +318,13 @@ summary {
 }
 
 #about-me-hobbies {
+    display: flex;
+    flex-direction: row;
+    flex-flow: flex wrap;
+    justify-content: center;
     background-color: lightyellow;
     padding: 10px;
     border-radius: 10px;
     width: calc(30em * 0.8);
-    align-self: center;
 }
 
