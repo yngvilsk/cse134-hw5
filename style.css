@@ -91,14 +91,13 @@ a:hover {
     justify-content: center; /* Determines the horizontal spacing of the items. */
     align-items: center; /* Determines the vertical alignment of the items */
     gap: 10px;
-    margin-top: 20px;
+    margin: 20px;
 }
 
 #homepage-text {
     width: calc(30em * 0.9); /* The number you multiply with depends on what font it is, and how much a character takes up in a em square. */
     padding-right: 5px; 
     background-color: #e6d7ff;
-    margin-left: 30px;
     border-radius: 10px;
     padding: 10px;
 }
@@ -130,11 +129,6 @@ a:hover {
     40%, 100% {
         transform: rotateZ(0);
     }
-}
-
-#homepage-pic {
-    margin-right: 30px;
-    padding-left: 5px;
 }
 
 /* Foot row */
@@ -209,7 +203,6 @@ h5 {
     flex-direction: column;
     padding-left: 20px;
     padding-right: 20px;
-    max-width: 250px;
 }
 
 .resume-content {
@@ -218,6 +211,7 @@ h5 {
     flex-direction: column;
     margin-left: 20px;
     padding-bottom: 20px;
+    margin-right: 20px;
 }
 
 #resume-details {
@@ -227,25 +221,27 @@ h5 {
     padding: 0;
 }
 
+
 #resume-details img{
     border-radius: 20%;
-    padding-top: 10px;;
+    padding-top: 10px;
 }
 
 .resume-details-key {
     width: 10px;
-    padding-right: 0;
+    padding: 0;
     font-weight: bold;
+    line-height: 180%;
 }
 
 .resume-details-value {
     padding: 0;
     text-align: right;
     width: calc(2em * 7);
-    padding-left: 0;
+    line-height: 180%;
 }
 
-li {
+#resume-skills li {
     line-height: 150%;
 }
 
@@ -363,18 +359,99 @@ summary {
         max-width: 300px;
     }
 
+    .resume-page {
+        grid-area: content;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 20px;
+        justify-content: center;
+
+    }
+
+/*
     .resume-sidebar {
-        grid-column: 1 / 3;
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
         flex-flow: row wrap;
-        max-height: auto;
-        width: 100dvw;
-        position: relative;
+        justify-content: center;
+
+    }
+    */
+
+    #resume-details {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: small;
+        gap: 10px;
+        margin-top: 10px;
     }
 
-    .resume-content {
-        grid-column: 1 / 3;
+    #resume-skills {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: small;
+        gap: 10px;
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+}
+
+/* iPhone 13 */
+@media screen and (max-width: 390px) {
+    nav > ul li:last-child {
+      visibility: visible;
+    }
+    nav > ul li:not(:last-child){
+        display: none;
     }
 
+    #homepage {
+        margin-top: 20px;;
+    }
+
+    #homepage-text {
+        max-width: 300px;
+    }
+
+    .resume-page {
+        grid-area: content;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 20px;
+        justify-content: center;
+
+    }
+
+/*
+    .resume-sidebar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-flow: row wrap;
+        justify-content: center;
+
+    }
+    */
+
+    #resume-details {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: small;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    #resume-skills {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: small;
+        gap: 10px;
+        margin-right: 20px;
+        margin-left: 20px;
+    }
 }
