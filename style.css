@@ -107,8 +107,8 @@ a:hover {
     animation: wiggle 2s linear;
 }
 
-#homepage-pic {
-    border-radius: 10px;;
+#homepage-pic picture {
+    border-radius: 10px;
 }
 
 /* Keyframe */
