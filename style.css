@@ -107,6 +107,10 @@ a:hover {
     animation: wiggle 2s linear;
 }
 
+#homepage-pic {
+    border-radius: 10px;;
+}
+
 /* Keyframe */
 @keyframes wiggle {
     0%, 7% {
