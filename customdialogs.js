@@ -1,23 +1,27 @@
 
 function showAlertDialog() {
+    document.getElementById('output').innerText = "";
     // Show the alert dialog
     document.getElementById('alertDialog').showModal();
 }
 
 function showConfirmDialog() {
+    document.getElementById('output').innerText = "";
     // Show the confirm dialog
     document.getElementById('confirmDialog').showModal();
 
     // Check if user pressed cancel
-    let cancelClicked = false;
     document.getElementById('cancelButton').addEventListener('click', function handleCancel() {
-        cancelClicked = true;
+        document.getElementById('output').textContent = `The value returned by confirm method is: false`;
+        //document.getElementById('confirmDialog').close();
     });
-    if (cancelClicked) {
-        document.getElementById('output').textContent = `The value returned by confirm method is: ${!cancelClicked}`;
-        document.getElementById('confirmDialog').close();
-    }
-    document.getElementById('output').textContent = `The value returned by confirm method is: ${!cancelClicked}`;
+
+    // Check if user pressed confirm
+    document.getElementById('cancelButton').addEventListener('click', function handleCancel() {
+        document.getElementById('output').textContent = `The value returned by confirm method is: true`;
+        //document.getElementById('confirmDialog').close();
+    });
+
 }
 
 
