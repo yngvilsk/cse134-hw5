@@ -42,7 +42,7 @@ function handlePromptSubmit() {
         document.getElementById('output').textContent = `You didn\'t enter a name!`;
     }
     else {
-        document.getElementById('output').textContent = `Hello, ${userInput}`;
+        document.getElementById('output').innerHTML = `Hello, ${userInput}`;
     }
 }
 
