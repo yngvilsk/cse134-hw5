@@ -1,3 +1,4 @@
+import { func } from "prop-types";
 
 function showAlertDialog() {
     document.getElementById('output').innerText = "";
@@ -23,9 +24,22 @@ function showConfirmDialog() {
         document.getElementById('output').textContent = `The value returned by confirm method is: true`;
         //document.getElementById('confirmDialog').close();
     });
+}
 
+function showPromptDialog() {
+    document.getElementById('output').innerText = "";
+    // Show the confirm dialog
+    document.getElementById('promptDialog').showModal();
+    let userInput = document.getElementById('promptInput').value;
+
+    if (userInput === null) {
+        document.getElementById('output').textContent = `You didn\'t enter a name!`;
+    }
+    else {
+        document.getElementById('output').textContent = `Hello, ${userInput}`;
+    }
 }
 
 
 
-export { showAlertDialog, showConfirmDialog }
+export { showAlertDialog, showConfirmDialog, showPromptDialog }

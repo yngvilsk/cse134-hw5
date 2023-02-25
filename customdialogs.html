@@ -50,9 +50,11 @@
         </dialog>
 
         <dialog id="promptDialog">
-            <h2>Alert pressed!</h2>
+            <p>What is your name:</p>
             <form method="dialog">
-                <button id="confirmButton">OK</button>
+                <input type="text" name="promptInput" id="promptInput"></input>
+                <button id="promptSubmitButton">Submit</button>
+                <button id="promptCancelButton">Cancel</button>
             </form>
         </dialog>
 
@@ -69,14 +71,14 @@
 	</footer>
 
     <script type="module">
-        import { showAlertDialog, showConfirmDialog } from './customdialogs.js';
+        import { showAlertDialog, showConfirmDialog, showPromptDialog } from './customdialogs.js';
 
         window.addEventListener('DOMContentLoaded', init);
 
         function init() {
             document.getElementById('showAlertButton').addEventListener('click', showAlertDialog);
             document.getElementById('showConfirmButton').addEventListener('click', showConfirmDialog);
-            document.getElementById('showPromptButton').addEventListener('click', showAlertDialog);
+            document.getElementById('showPromptButton').addEventListener('click', showPromptDialog);
         }
     </script>
 
