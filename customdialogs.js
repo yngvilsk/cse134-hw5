@@ -62,7 +62,7 @@ function showSaferPromptDialog() {
 }
 
 function handleSaferPromptSubmit() {
-    let dirtyUserInput = document.getElementById('promptInput').value;
+    let dirtyUserInput = document.getElementById('saferPromptInput').value;
 
     if (dirtyUserInput == '') {
         document.getElementById('output').textContent = `You didn\'t enter a name!`;
