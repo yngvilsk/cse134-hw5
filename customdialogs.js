@@ -1,5 +1,3 @@
-import { func } from "prop-types";
-
 function showAlertDialog() {
     document.getElementById('output').innerText = "";
     // Show the alert dialog
