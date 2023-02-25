@@ -17,7 +17,7 @@ function showConfirmDialog() {
     });
 
     // Check if user pressed confirm
-    document.getElementById('cancelButton').addEventListener('click', function handleCancel() {
+    document.getElementById('confirmButton').addEventListener('click', function handleCancel() {
         document.getElementById('output').textContent = `The value returned by confirm method is: true`;
         //document.getElementById('confirmDialog').close();
     });
