@@ -86,20 +86,10 @@
                 // Sanitize the user input using DOMPurify
                 let cleanInput = DOMPurify.sanitize(dirtyInput);
 
-                // Use a tagged template string to display the sanitized input in the output tag
-                //promptOutput.innerHTML = `You entered: ${unsafeHTML`${clean}`}`;
-                //output.textContent = `Hello, ${cleanInput}`;
                 output.innerHTML = `Hello, ${cleanInput}`;
             }
         });
-        /*
-        // Define a tagged template string to mark a string as safe for HTML rendering
-        function unsafeHTML(strings, ...values) {
-            return DOMPurify.sanitize(
-            strings.reduce((acc, str, i) => acc + values[i - 1] + str)
-            );
-        }
-        */
+
 
 
     </script>

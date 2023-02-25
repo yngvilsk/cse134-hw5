@@ -32,6 +32,7 @@
         <button id="alertButton">Alert</button>
         <button id="confirmButton">Confirm</button>
         <button id="promptButton">Prompt</button>
+        <output id="output"></output>
 
         <dialog id="alertDialog">
             <h2>Alert pressed!</h2>
@@ -39,6 +40,22 @@
                 <button id="confirmButton">OK</button>
             </form>
         </dialog>
+
+        <dialog id="confirmDialog">
+            <p>Do you confirm this?</p>
+            <form method="dialog">
+                <button id="confirmButton">OK</button>
+                <button id="cancelButton">Cancel</button>
+            </form>
+        </dialog>
+
+        <dialog id="promptDialog">
+            <h2>Alert pressed!</h2>
+            <form method="dialog">
+                <button id="confirmButton">OK</button>
+            </form>
+        </dialog>
+
     </main>
 
 	<footer>
@@ -52,17 +69,14 @@
 	</footer>
 
     <script type="module">
-        import { showAlertDialog } from './customdialogs.js';
+        import { showAlertDialog, showConfirmDialog } from './customdialogs.js';
 
         window.addEventListener('DOMContentLoaded', init);
 
         function init() {
             console.log('Initialising eventlisteners');
-            document.getElementById('alertButton').addEventListener('click', function() {
-                console.log('alert button clicked');
-                showAlertDialog();
-            });
-            document.getElementById('confirmButton').addEventListener('click', showAlertDialog);
+            document.getElementById('alertButton').addEventListener('click', showAlertDialog);
+            document.getElementById('confirmButton').addEventListener('click', showConfirmDialog);
             document.getElementById('promptButton').addEventListener('click', showAlertDialog);
         }
     </script>
