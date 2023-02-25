@@ -24,11 +24,6 @@ function showPromptDialog() {
     document.getElementById('output').innerText = "";
     // Show the confirm dialog
     document.getElementById('promptDialog').showModal();
-
-    // Check if user pressed cancel
-    document.getElementById('cancelButton').addEventListener('click', function handleCancel() {
-        document.getElementById('output').textContent = ``;
-    });
     
     // Check if user pressed submit
     document.getElementById('promptSubmitButton').addEventListener('click', handlePromptSubmit);
@@ -49,15 +44,10 @@ function handlePromptSubmit() {
 function showSaferPromptDialog() {
     document.getElementById('output').innerText = "";
     // Show the confirm dialog
-    document.getElementById('promptDialog').showModal();
-
-    // Check if user pressed cancel
-    document.getElementById('cancelButton').addEventListener('click', function handleCancel() {
-        document.getElementById('output').textContent = ``;
-    });
+    document.getElementById('saferPromptDialog').showModal();
     
     // Check if user pressed submit
-    document.getElementById('promptSubmitButton').addEventListener('click', handleSaferPromptSubmit);
+    document.getElementById('saferPromptSubmitButton').addEventListener('click', handleSaferPromptSubmit);
 
 }
 
