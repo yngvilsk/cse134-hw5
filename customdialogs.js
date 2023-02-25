@@ -12,12 +12,14 @@ function showConfirmDialog() {
 
     // Check if user pressed cancel
     document.getElementById('cancelButton').addEventListener('click', function handleCancel() {
+        console.log('User pressed cancel');
         document.getElementById('output').textContent = `The value returned by confirm method is: false`;
         //document.getElementById('confirmDialog').close();
     });
 
     // Check if user pressed confirm
     document.getElementById('confirmButton').addEventListener('click', function handleCancel() {
+        console.log('User pressed confirm');
         document.getElementById('output').textContent = `The value returned by confirm method is: true`;
         //document.getElementById('confirmDialog').close();
     });
