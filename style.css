@@ -1,6 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand');
+/*@import url('https://fonts.googleapis.com/css2?family=Quicksand');
 @import url('http://fonts.googleapis.com/css?family=Roboto');
- 
+*/
+
 body {
     display: grid;  /* Defines the element as a grid container */
     grid-template-columns: 1fr;
