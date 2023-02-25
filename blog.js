@@ -49,4 +49,4 @@ function handleSaferPromptSubmit() {
 
 
 
-export { showAlertDialog, showConfirmDialog, showPromptDialog, showSaferPromptDialog }
+export { showAlertDialog, showConfirmDialog, showSaferPromptDialog }

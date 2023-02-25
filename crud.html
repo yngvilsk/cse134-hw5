@@ -31,7 +31,7 @@
     </header>
     
 	<main>
-        <h1>Blog Posts</h1>
+        <h2>Blog Posts</h2>
         <ul>
             <li>Blog</li>
         </ul>
@@ -83,14 +83,13 @@
 	</footer>
 
     <script type="module">
-        import { showAlertDialog, showConfirmDialog, showPromptDialog, showSaferPromptDialog } from './blog.js';
+        import { showAlertDialog, showConfirmDialog, showSaferPromptDialog } from './blog.js';
 
         window.addEventListener('DOMContentLoaded', init);
 
         function init() {
             document.getElementById('showAlertButton').addEventListener('click', showAlertDialog);
             document.getElementById('showConfirmButton').addEventListener('click', showConfirmDialog);
-            document.getElementById('showPromptButton').addEventListener('click', showPromptDialog);
             document.getElementById('showSaferPromptButton').addEventListener('click', showSaferPromptDialog);
         }
     </script>
