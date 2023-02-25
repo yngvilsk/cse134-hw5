@@ -14,6 +14,7 @@ function showConfirmDialog() {
         cancelClicked = true;
     });
     if (cancelClicked) {
+        document.getElementById('output').textContent = `The value returned by confirm method is: ${!cancelClicked}`;
         document.getElementById('confirmDialog').close();
     }
     document.getElementById('output').textContent = `The value returned by confirm method is: ${!cancelClicked}`;
