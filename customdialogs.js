@@ -37,8 +37,8 @@ function showPromptDialog() {
 
 function handleSubmit() {
     let userInput = document.getElementById('promptInput').value;
-    
-    if (userInput === null) {
+
+    if (userInput == '') {
         document.getElementById('output').textContent = `You didn\'t enter a name!`;
     }
     else {
