@@ -23,50 +23,50 @@
                 <li><a href="about-me.html">About me</a></li>
                 <li><a href="my-resume.html">My Resume</a></li>
                 <li><a href="nativedialogs.html">native</a></li>
-                <li><a href="customdialogs.html" class="active">custom</a></li>
-                <li><a href="crud.html">crud</a></li>
+                <li><a href="customdialogs.html">custom</a></li>
+                <li><a href="crud.html" class="active">crud</a></li>
                 <li><picture> <img src="icons/hamburger-menu.png" alt="" /> </picture></li>
             </ul>
         </nav>
     </header>
     
 	<main>
-        <button id="showAlertButton">Alert</button>
-        <button id="showConfirmButton">Confirm</button>
-        <button id="showPromptButton">Prompt</button>
-        <button id="showSaferPromptButton">Safer Prompt</button>
+        <h1>Blog Posts</h1>
+        <ul>
+            <li>Blog</li>
+        </ul>
+        <button id="addBlogPost">Add a blog post</button>
+        <button id="deleteBlogPost">Delete</button>
+        <button id="editBlogPost">Edit</button>
+
         <output id="output"></output>
 
         <dialog id="alertDialog">
-            <h2>Alert pressed!</h2>
+            <h2>Blog post is edited.</h2>
             <form method="dialog">
                 <button>OK</button>
             </form>
         </dialog>
 
         <dialog id="confirmDialog">
-            <p>Do you confirm this?</p>
+            <p>Are you sure you want to delete?</p>
             <form method="dialog">
                 <button id="confirmButton">Confirm</button>
                 <button id="cancelButton">Cancel</button>
             </form>
         </dialog>
 
-        <dialog id="promptDialog">
-            <p>What is your name:</p>
+        <dialog id="saferPromptDialog">
+            <h1>Add a blog post:</h1>
             <form method="dialog">
-                <input type="text" name="promptInput" id="promptInput"></input>
+                <label for="postTitle">Post Title:</label>
+                <input type="text" name="postTitle" id="postTitle"></input>
+                <label for="postDate">Post Date:</label>
+                <input type="text" name="postDate" id="postDate"></input>
+                <label for="postSummary">Post summary</label>
+                <input type="text" name="postSummary" id="postSummary"></input>
                 <button id="promptSubmitButton">Submit</button>
                 <button id="promptCancelButton">Cancel</button>
-            </form>
-        </dialog>
-
-        <dialog id="saferPromptDialog">
-            <p>What is your name:</p>
-            <form method="dialog">
-                <input type="text" name="promptInput" id="saferPromptInput"></input>
-                <button id="saferPromptSubmitButton">Submit</button>
-                <button id="saferPromptCancelButton">Cancel</button>
             </form>
         </dialog>
 
@@ -83,7 +83,7 @@
 	</footer>
 
     <script type="module">
-        import { showAlertDialog, showConfirmDialog, showPromptDialog, showSaferPromptDialog } from './customdialogs.js';
+        import { showAlertDialog, showConfirmDialog, showPromptDialog, showSaferPromptDialog } from './blog.js';
 
         window.addEventListener('DOMContentLoaded', init);
 
