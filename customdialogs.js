@@ -64,12 +64,12 @@ function showSaferPromptDialog() {
 function handleSaferPromptSubmit() {
     let dirtyUserInput = document.getElementById('promptInput').value;
 
-    if (userInput == '') {
+    if (dirtyUserInput == '') {
         document.getElementById('output').textContent = `You didn\'t enter a name!`;
     }
     else {
         // Sanitize the user input using DOMPurify
-        let cleanInput = DOMPurify.sanitize(dirtyInput);
+        let cleanInput = DOMPurify.sanitize(dirtyUserInput);
 
         document.getElementById('output').innerHTML = `Hello, ${cleanInput}`;
     }
