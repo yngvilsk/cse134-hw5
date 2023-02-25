@@ -29,9 +29,9 @@
     </header>
     
 	<main>
-        <button id="alertButton">Alert</button>
-        <button id="confirmButton">Confirm</button>
-        <button id="promptButton">Prompt</button>
+        <button id="showAlertButton">Alert</button>
+        <button id="showConfirmButton">Confirm</button>
+        <button id="showPromptButton">Prompt</button>
         <output id="output"></output>
 
         <dialog id="alertDialog">
@@ -74,10 +74,9 @@
         window.addEventListener('DOMContentLoaded', init);
 
         function init() {
-            console.log('Initialising eventlisteners');
-            document.getElementById('alertButton').addEventListener('click', showAlertDialog);
-            document.getElementById('confirmButton').addEventListener('click', showConfirmDialog);
-            document.getElementById('promptButton').addEventListener('click', showAlertDialog);
+            document.getElementById('showAlertButton').addEventListener('click', showAlertDialog);
+            document.getElementById('showConfirmButton').addEventListener('click', showConfirmDialog);
+            document.getElementById('showPromptButton').addEventListener('click', showAlertDialog);
         }
     </script>
 
