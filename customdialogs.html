@@ -32,6 +32,7 @@
         <button id="showAlertButton">Alert</button>
         <button id="showConfirmButton">Confirm</button>
         <button id="showPromptButton">Prompt</button>
+        <button id="showSaferPromptButton">Safer Prompt</button>
         <output id="output"></output>
 
         <dialog id="alertDialog">
@@ -58,6 +59,15 @@
             </form>
         </dialog>
 
+        <dialog id="saferPromptDialog">
+            <p>What is your name:</p>
+            <form method="dialog">
+                <input type="text" name="promptInput" id="saferPromptInput"></input>
+                <button id="saferPromptSubmitButton">Submit</button>
+                <button id="saferPromptCancelButton">Cancel</button>
+            </form>
+        </dialog>
+
     </main>
 
 	<footer>
@@ -71,7 +81,7 @@
 	</footer>
 
     <script type="module">
-        import { showAlertDialog, showConfirmDialog, showPromptDialog } from './customdialogs.js';
+        import { showAlertDialog, showConfirmDialog, showPromptDialog, showSaferPromptDialog } from './customdialogs.js';
 
         window.addEventListener('DOMContentLoaded', init);
 
@@ -79,6 +89,7 @@
             document.getElementById('showAlertButton').addEventListener('click', showAlertDialog);
             document.getElementById('showConfirmButton').addEventListener('click', showConfirmDialog);
             document.getElementById('showPromptButton').addEventListener('click', showPromptDialog);
+            document.getElementById('showSaferPromptButton').addEventListener('click', showSaferPromptDialog);
         }
     </script>
 

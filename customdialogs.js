@@ -31,11 +31,11 @@ function showPromptDialog() {
     });
     
     // Check if user pressed submit
-    document.getElementById('promptSubmitButton').addEventListener('click', handleSubmit);
+    document.getElementById('promptSubmitButton').addEventListener('click', handlePromptSubmit);
 
 }
 
-function handleSubmit() {
+function handlePromptSubmit() {
     let userInput = document.getElementById('promptInput').value;
 
     if (userInput == '') {
@@ -46,6 +46,35 @@ function handleSubmit() {
     }
 }
 
+function showSaferPromptDialog() {
+    document.getElementById('output').innerText = "";
+    // Show the confirm dialog
+    document.getElementById('promptDialog').showModal();
+
+    // Check if user pressed cancel
+    document.getElementById('cancelButton').addEventListener('click', function handleCancel() {
+        document.getElementById('output').textContent = ``;
+    });
+    
+    // Check if user pressed submit
+    document.getElementById('promptSubmitButton').addEventListener('click', handleSaferPromptSubmit);
+
+}
+
+function handleSaferPromptSubmit() {
+    let dirtyUserInput = document.getElementById('promptInput').value;
+
+    if (userInput == '') {
+        document.getElementById('output').textContent = `You didn\'t enter a name!`;
+    }
+    else {
+        // Sanitize the user input using DOMPurify
+        let cleanInput = DOMPurify.sanitize(dirtyInput);
+
+        document.getElementById('output').innerHTML = `Hello, ${cleanInput}`;
+    }
+}
 
 
-export { showAlertDialog, showConfirmDialog, showPromptDialog }
+
+export { showAlertDialog, showConfirmDialog, showPromptDialog, showSaferPromptDialog }
