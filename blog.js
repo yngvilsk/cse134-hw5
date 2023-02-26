@@ -24,12 +24,11 @@ function showConfirmDialog() {
 
 
 function showAddBlogPostDialog() {
-    document.getElementById('output').innerText = "";
     // Show the confirm dialog
     document.getElementById('addBlogPostDialog').showModal();
     
     // Check if user pressed submit
-    document.getElementById('saferPromptSubmitButton').addEventListener('click', handleSaferPromptSubmit);
+    document.getElementById('submitBlogPostButton').addEventListener('click', handleSaferPromptSubmit);
 
 }
 
