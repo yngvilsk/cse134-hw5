@@ -81,7 +81,7 @@ function handleSaferPromptSubmit() {
 function updateBlogPostList() {
     blogPosts.forEach((item)=> {
         let li = document.createElement("li");
-        li.innerHTML = item;
+        li.innerHTML = item.title + item.date + item.summary;
         document.getElementById('blogPostList').appendChild(li);
     })
 }
