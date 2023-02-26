@@ -86,19 +86,31 @@ function updateBlogPostList() {
         let li = document.createElement("li");
         li.innerHTML = item.title + item.date + item.summary;
 
-        // Create button element
-        let button = document.createElement("button");
-        button.innerHTML = "Delete";
-        button.onclick = function() {
-            // Perform action when button is clicked
-            // For example, remove the corresponding blog post from the array
+        // Create Delete button element
+        let deleteButton = document.createElement("button");
+        deleteButton.innerHTML = "Delete";
+        deleteButton.onclick = function() {
+            // Perform action when button is clicked:
+            // Remove the corresponding blog post from the array
+            let index = blogPosts.indexOf(item);
+            blogPosts.splice(index, 1);
+            updateBlogPostList(); // Update the list to reflect the changes
+        };
+
+        // Create Delete button element
+        let editButton = document.createElement("button");
+        editButton.innerHTML = "Edit";
+        editButton.onclick = function() {
+            // Perform action when button is clicked:
+            // Edit corresponding blog post from the array
             let index = blogPosts.indexOf(item);
             blogPosts.splice(index, 1);
             updateBlogPostList(); // Update the list to reflect the changes
         };
         
-        // Append button to li element
-        li.appendChild(button);
+        // Append buttons to li element
+        li.appendChild(deleteButton);
+        li.appendChild(editButton);
 
         document.getElementById('blogPostList').appendChild(li);
     })
