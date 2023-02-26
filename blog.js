@@ -79,6 +79,9 @@ function handleSaferPromptSubmit() {
 }
 
 function updateBlogPostList() {
+    // Clear existing list
+    document.getElementById('blogPostList').innerHTML = '';
+    
     blogPosts.forEach((item)=> {
         let li = document.createElement("li");
         li.innerHTML = item.title + item.date + item.summary;
