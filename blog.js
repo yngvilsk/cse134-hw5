@@ -85,19 +85,38 @@ function updateBlogPostList() {
     blogPosts.forEach((item)=> {
         let li = document.createElement("li");
         li.innerHTML = item.title + item.date + item.summary;
+
+        // Create button element
+        let button = document.createElement("button");
+        button.innerHTML = "Delete";
+        button.onclick = function() {
+            // Perform action when button is clicked
+            // For example, remove the corresponding blog post from the array
+            let index = blogPosts.indexOf(item);
+            blogPosts.splice(index, 1);
+            updateBlogPostList(); // Update the list to reflect the changes
+        };
+        
+        // Append button to li element
+        li.appendChild(button);
+
         document.getElementById('blogPostList').appendChild(li);
     })
 
-    // Create button element
-    let deleteButton = document.createElement("button");
-    deleteButton.innerHTML = "Delete";
-    deleteButton.onclick = () => {
-        showConfirmDialog();
-    };
-    li.appendChild(deleteButton);
+
     
 }
 
 
 
 export { showAlertDialog, showConfirmDialog, showAddBlogPostDialog, updateBlogPostList }
+
+/**
+ *     // Create button element
+    let deleteButton = document.createElement("button");
+    deleteButton.innerHTML = "Delete";
+    deleteButton.onclick = () => {
+        showConfirmDialog();
+    };
+    li.appendChild(deleteButton);
+ */
