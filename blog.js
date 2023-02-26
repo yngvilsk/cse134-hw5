@@ -23,30 +23,56 @@ function showConfirmDialog() {
 
 
 
-function showSaferPromptDialog() {
+function showAddBlogPostDialog() {
     document.getElementById('output').innerText = "";
     // Show the confirm dialog
-    document.getElementById('saferPromptDialog').showModal();
+    document.getElementById('addBlogPostDialog').showModal();
     
     // Check if user pressed submit
     document.getElementById('saferPromptSubmitButton').addEventListener('click', handleSaferPromptSubmit);
 
 }
 
-function handleSaferPromptSubmit() {
-    let dirtyUserInput = document.getElementById('saferPromptInput').value;
+let blogPosts = [
+    ['Homemade Acaii Bowl', 'February 13, 2023', 'Save money by making your favorouite bowl at home! My recipe has only 3 steps.'],
+    ['Top Movies 2022', 'December 22, 2022', 'Here is what I think were the best movies this year'],
+];
 
-    if (dirtyUserInput == '') {
-        document.getElementById('output').textContent = `You didn\'t enter a name!`;
+function handleSaferPromptSubmit() {
+    let dirtyPostTitle = document.getElementById('postTitle').value;
+    let dirtyPostDate = document.getElementById('postDate').value;
+    let dirtyPostSummary = document.getElementById('postSummary').value;
+
+    if (dirtyPostTitle == '') {
+        document.getElementById('errorPostTitle').textContent = `Please enter a title`;
     }
+    else if (dirtyPostDate == '') {
+        document.getElementById('errorPostDate').textContent = `Please enter a date`;
+    }
+    else if (dirtyPostSummary == '') {
+        document.getElementById('errorPostSummary').textContent = `Please enter a summary`;
+    }
+
     else {
         // Sanitize the user input using DOMPurify
-        let cleanInput = DOMPurify.sanitize(dirtyUserInput);
+        let cleanPostTitle = DOMPurify.sanitize(dirtyPostTitle);
+        let cleanPostDate = DOMPurify.sanitize(dirtyPostDate);
+        let cleanPostSummary = DOMPurify.sanitize(dirtyPostSummary);
 
-        document.getElementById('output').innerHTML = `Hello, ${cleanInput}`;
+        blogPosts.push([cleanPostTitle, cleanPostDate, cleanPostSummary]);
+
+        updateBlogPostList();
     }
+}
+
+function updateBlogPostList() {
+    blogPosts.forEach((item)=> {
+        let li = document.createElement("li");
+        li.innerHTML = item;
+        document.getElementById('blogPostList').appendChild(li);
+    })
 }
 
 
 
-export { showAlertDialog, showConfirmDialog, showSaferPromptDialog }
+export { showAlertDialog, showConfirmDialog, showAddBlogPostDialog, updateBlogPostList }
