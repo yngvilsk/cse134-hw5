@@ -79,14 +79,23 @@ function handleSaferPromptSubmit() {
 }
 
 function updateBlogPostList() {
-    // Clear existing list
+    // Clear existing list to avoid duplicating it
     document.getElementById('blogPostList').innerHTML = '';
-    
+
     blogPosts.forEach((item)=> {
         let li = document.createElement("li");
         li.innerHTML = item.title + item.date + item.summary;
         document.getElementById('blogPostList').appendChild(li);
     })
+
+    // Create button element
+    let deleteButton = document.createElement("button");
+    deleteButton.innerHTML = "Delete";
+    deleteButton.onclick = () => {
+        showConfirmDialog();
+    };
+    li.appendChild(deleteButton);
+    
 }
 
 
