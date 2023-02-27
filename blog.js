@@ -97,8 +97,9 @@ function updateBlogPostList() {
         // Append buttons to li element
         li.appendChild(deleteButton);
         li.appendChild(editButton);
-
-
+        
+        console.log(item);
+        console.log(item.title);
         // Eventlisteners for the buttons
         deleteButton.addEventListener('click', function handleDeletePost(item) {
             console.log("Delete pressed");
@@ -121,14 +122,7 @@ function showEditForm(blogPost) {
     console.log("Edit pressed");
     let editDialog = document.getElementById('editBlogPostDialog');
     editDialog.showModal();
-    /*
-    // Show the edit post dialog
-    // Show the dialog if it is not already open
-    if (!editDialog.hasAttribute("open")) {
-        document.body.appendChild(editDialog);
-        editDialog.showModal();
-    }
-    */
+
    console.log(blogPost.title);
 
     // Pre-fill the form fields with the values from the blogPost object
