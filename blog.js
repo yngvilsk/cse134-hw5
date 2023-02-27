@@ -86,7 +86,7 @@ function updateBlogPostList() {
         let li = document.createElement("li");
         li.innerHTML = item.title + item.date + item.summary;
 
-        // Create Delete button element
+        // Create Delete button 
         let deleteButton = document.createElement("button");
         deleteButton.innerHTML = "Delete";
 
@@ -97,7 +97,7 @@ function updateBlogPostList() {
             updateBlogPostList(); // Update the list to reflect the changes
         });
 
-        // Create Delete button element
+        // Create Edit button
         let editButton = document.createElement("button");
         editButton.innerHTML = "Edit";
         editButton.addEventListener('click', showEditForm(item));
@@ -116,7 +116,7 @@ function showEditForm(blogPost) {
     // Show the edit post dialog
     // Show the dialog if it is not already open
     if (!editDialog.hasAttribute("open")) {
-        //document.body.appendChild(editDialog);
+        document.body.appendChild(editDialog);
         editDialog.showModal();
     }
 
