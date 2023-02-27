@@ -1,6 +1,15 @@
 function showStyledAddDialog() {
-    // Show the confirm dialog
-    document.getElementById('styledAddDialog').showModal();
+
+    let addDialog = document.getElementById('styledAddDialog');
+
+    // Style it
+    addDialog.style.backgroundcolor = 'lightgrey';
+    addDialog.style.margin = '20px';
+    addDialog.style.padding = '10px';
+    addDialog.style.borderRadius = '10px';
+    
+    // Show it
+    addDialog.showModal();
     
     // Check if user pressed submit
     document.getElementById('styledSubmitBlogPostButton').addEventListener('click', handleSaferPromptSubmit);
@@ -93,6 +102,13 @@ function updateBlogPostList() {
 
 function showEditForm(blogPost) {
     let editDialog = document.getElementById('styledEditDialog');
+
+    // Style it
+    editDialog.style.backgroundcolor = 'lightgrey';
+    editDialog.style.margin = '20px';
+    editDialog.style.padding = '10px';
+    editDialog.style.borderRadius = '10px';
+
     editDialog.showModal();
 
     // Pre-fill the form fields with the values from the blogPost object
