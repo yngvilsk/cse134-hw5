@@ -114,7 +114,11 @@ function showEditForm(blogPost) {
     let editDialog = document.getElementById('editBlogPostDialog');
 
     // Show the edit post dialog
-    editDialog.showModal();
+    // Show the dialog if it is not already open
+    if (!editDialog.hasAttribute("open")) {
+        //document.body.appendChild(editDialog);
+        editDialog.showModal();
+    }
 
     // Pre-fill the form fields with the values from the blogPost object
     editDialog.querySelector("#editPostTitle").value = blogPost.title;
