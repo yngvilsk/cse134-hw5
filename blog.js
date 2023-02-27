@@ -108,7 +108,9 @@ function updateBlogPostList() {
             updateBlogPostList(); // Update the list to reflect the changes
         });
 
-        editButton.addEventListener('click', showEditForm(item));
+        editButton.addEventListener('click', function handleEditPost(item) { 
+            showEditForm(item); 
+        });
 
 
         document.getElementById('blogPostList').appendChild(li);
