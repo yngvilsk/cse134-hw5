@@ -107,7 +107,7 @@ function updateBlogPostList() {
             updateBlogPostList(); // Update the list to reflect the changes
         });
 
-        editButton.addEventListener('click', function handleEditPost(item) { 
+        editButton.addEventListener('click', function handleEditPost() { 
             showEditForm(item); 
         });
 
@@ -124,17 +124,17 @@ function showEditForm(blogPost) {
    console.log(blogPost.title);
 
     // Pre-fill the form fields with the values from the blogPost object
-    editDialog.querySelector("#editPostTitle").value = blogPost.title;
-    editDialog.querySelector("#editpPostDate").value = blogPost.date;
-    editDialog.querySelector("#editPostSummary").value = blogPost.summary;
+    editDialog.getElementById("editPostTitle").value = blogPost.title;
+    editDialog.getElementById("editpPostDate").value = blogPost.date;
+    editDialog.getElementById("editPostSummary").value = blogPost.summary;
     
     // Add a submit event listener to the form
     document.getElementById('editSubmitBlogPostButton').addEventListener("click", function handleEditPost() {
 
         // Update the blogPost object with the values from the form fields
-        blogPost.title = editDialog.querySelector("#editPostTitle").value;
-        blogPost.date = editDialog.querySelector("#editpPostDate").value;
-        blogPost.summary = editDialog.querySelector("#editPostSummary").value;
+        blogPost.title = editDialog.getElementById("editPostTitle").value;
+        blogPost.date = editDialog.getElementById("editpPostDate").value;
+        blogPost.summary = editDialog.getElementById("editPostSummary").value;
 
         updateBlogPostList(); // Update the list to reflect the changes
     });
