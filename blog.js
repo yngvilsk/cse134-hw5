@@ -120,13 +120,16 @@ function updateBlogPostList() {
 function showEditForm(blogPost) {
     console.log("Edit pressed");
     let editDialog = document.getElementById('editBlogPostDialog');
-
+    editDialog.showModal();
+    /*
     // Show the edit post dialog
     // Show the dialog if it is not already open
     if (!editDialog.hasAttribute("open")) {
         document.body.appendChild(editDialog);
         editDialog.showModal();
     }
+    */
+   console.log(blogPost.title);
 
     // Pre-fill the form fields with the values from the blogPost object
     editDialog.querySelector("#editPostTitle").value = blogPost.title;
