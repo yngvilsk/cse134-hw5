@@ -34,7 +34,7 @@ function showAddBlogPostDialog() {
 
 let blogPosts = [
     {
-        'title': 'Homemade Acaii Bowl',
+        'title': 'Homemade Acai Bowl',
         'date': '2023-02-03',
         'summary': 'Save money by making your favorouite bowl at home! My recipe has only 3 steps.',
     },
