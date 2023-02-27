@@ -3,10 +3,20 @@ function showStyledAddDialog() {
     let addDialog = document.getElementById('styledAddDialog');
 
     // Style it
-    addDialog.style.backgroundcolor = 'lightgrey';
+    addDialog.style.backgroundcolor = 'yellow';
     addDialog.style.margin = '20px';
     addDialog.style.padding = '10px';
     addDialog.style.borderRadius = '10px';
+
+    const labels = dialog.getElementsByTagName('label');
+    for (let i = 0; i < labels.length; i++) {
+    labels[i].style.padding = '5px 0';
+    }
+
+    const inputs = dialog.getElementsByTagName('input');
+    for (let i = 0; i < inputs.length; i++) {
+    inputs[i].style.padding = '5px';
+    }
     
     // Show it
     addDialog.showModal();
@@ -104,7 +114,7 @@ function showEditForm(blogPost) {
     let editDialog = document.getElementById('styledEditDialog');
 
     // Style it
-    editDialog.style.backgroundcolor = 'lightgrey';
+    editDialog.style.backgroundcolor = 'yello';
     editDialog.style.margin = '20px';
     editDialog.style.padding = '10px';
     editDialog.style.borderRadius = '10px';
