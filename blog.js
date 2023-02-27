@@ -103,8 +103,7 @@ function updateBlogPostList() {
         editButton.onclick = function() {
             // Perform action when button is clicked:
             // Edit corresponding blog post from the array
-            let index = blogPosts.indexOf(item);
-            blogPosts.splice(index, 1);
+            showEditForm(item);
             updateBlogPostList(); // Update the list to reflect the changes
         };
         
@@ -114,9 +113,30 @@ function updateBlogPostList() {
 
         document.getElementById('blogPostList').appendChild(li);
     })
+}
 
+function showEditForm(blogPost) {
+    // Show the edit post dialog
+    document.getElementById('editBlogPostDialog').showModal();
 
+    // Pre-fill the form fields with the values from the blogPost object
+    dialog.querySelector("#editPostTitle").value = blogPost.title;
+    dialog.querySelector("#editpPostDate").value = blogPost.date;
+    dialog.querySelector("#editPostSummary").value = blogPost.summary;
     
+    // Add a submit event listener to the form
+    document.getElementById('editSubmitBlogPostButton').addEventListener("click", function handleEditPost() {
+
+        // Update the blogPost object with the values from the form fields
+        blogPost.title = dialog.querySelector("#title").value;
+        blogPost.date = dialog.querySelector("#date").value;
+        blogPost.summary = dialog.querySelector("#summary").value;
+
+        dialog.close(); // Close the dialog
+
+        updateBlogPostList(); // Update the list to reflect the changes
+    });
+
 }
 
 
