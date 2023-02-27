@@ -124,17 +124,17 @@ function showEditForm(blogPost) {
    console.log(blogPost.title);
 
     // Pre-fill the form fields with the values from the blogPost object
-    editDialog.getElementById("editPostTitle").value = blogPost.title;
-    editDialog.getElementById("editpPostDate").value = blogPost.date;
-    editDialog.getElementById("editPostSummary").value = blogPost.summary;
+    document.getElementById("editPostTitle").value = blogPost.title;
+    document.getElementById("editpPostDate").value = blogPost.date;
+    document.getElementById("editPostSummary").value = blogPost.summary;
     
     // Add a submit event listener to the form
     document.getElementById('editSubmitBlogPostButton').addEventListener("click", function handleEditPost() {
 
         // Update the blogPost object with the values from the form fields
-        blogPost.title = editDialog.getElementById("editPostTitle").value;
-        blogPost.date = editDialog.getElementById("editpPostDate").value;
-        blogPost.summary = editDialog.getElementById("editPostSummary").value;
+        blogPost.title = document.getElementById("editPostTitle").value;
+        blogPost.date = document.getElementById("editpPostDate").value;
+        blogPost.summary = document.getElementById("editPostSummary").value;
 
         updateBlogPostList(); // Update the list to reflect the changes
     });
