@@ -113,6 +113,7 @@ function updateBlogPostList() {
 
         document.getElementById('blogPostList').appendChild(li);
     })
+    saveBlogPosts(); // Save the updated blogPosts array to localStorage
 }
 
 function showEditForm(blogPost) {
@@ -134,8 +135,12 @@ function showEditForm(blogPost) {
 
         updateBlogPostList(); // Update the list to reflect the changes
     });
-
 }
+
+// Define saveBlogPosts function to save the blogPosts array to localStorage
+function saveBlogPosts() {
+    localStorage.setItem('blogPosts', JSON.stringify(blogPosts));
+  }
 
 
 
