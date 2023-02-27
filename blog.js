@@ -100,7 +100,6 @@ function updateBlogPostList() {
         
         // Eventlisteners for the buttons
         deleteButton.addEventListener('click', function handleDeletePost(item) {
-            console.log("Delete pressed");
             // Remove the corresponding blog post from the array
             let index = blogPosts.indexOf(item);
             blogPosts.splice(index, 1);
@@ -117,11 +116,8 @@ function updateBlogPostList() {
 }
 
 function showEditForm(blogPost) {
-    console.log("Edit pressed");
     let editDialog = document.getElementById('editBlogPostDialog');
     editDialog.showModal();
-
-   console.log(blogPost.title);
 
     // Pre-fill the form fields with the values from the blogPost object
     document.getElementById("editPostTitle").value = blogPost.title;
@@ -144,13 +140,3 @@ function showEditForm(blogPost) {
 
 
 export { showAlertDialog, showConfirmDialog, showAddBlogPostDialog, updateBlogPostList }
-
-/**
- *     // Create button element
-    let deleteButton = document.createElement("button");
-    deleteButton.innerHTML = "Delete";
-    deleteButton.onclick = () => {
-        showConfirmDialog();
-    };
-    li.appendChild(deleteButton);
- */
