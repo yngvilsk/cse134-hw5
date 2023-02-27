@@ -89,7 +89,8 @@
         import { showStyledAddDialog, updateBlogPostList } from './styledblog.js';
 
         window.addEventListener('DOMContentLoaded', init);
-
+        document.getElementById('styledAddButton').style.padding = '5px';
+        document.getElementById('styledAddButton').style.color = 'yellow';
         function init() {
             document.getElementById('styledAddButton').addEventListener('click', showStyledAddDialog);
             updateBlogPostList();

@@ -3,7 +3,7 @@ function showStyledAddDialog() {
     let addDialog = document.getElementById('styledAddDialog');
 
     // Style it
-    addDialog.style.backgroundcolor = 'yellow';
+    addDialog.style.color = 'yellow';
     addDialog.style.margin = '20px';
     addDialog.style.padding = '10px';
     addDialog.style.borderRadius = '10px';
