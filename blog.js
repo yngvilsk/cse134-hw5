@@ -98,8 +98,6 @@ function updateBlogPostList() {
         li.appendChild(deleteButton);
         li.appendChild(editButton);
         
-        console.log(item);
-        console.log(item.title);
         // Eventlisteners for the buttons
         deleteButton.addEventListener('click', function handleDeletePost(item) {
             console.log("Delete pressed");
