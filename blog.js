@@ -129,8 +129,6 @@ function showEditForm(blogPost) {
         blogPost.date = editDialog.querySelector("#editpPostDate").value;
         blogPost.summary = editDialog.querySelector("#editPostSummary").value;
 
-        editDialog.close(); // Close the dialog
-
         updateBlogPostList(); // Update the list to reflect the changes
     });
 
