@@ -23,51 +23,53 @@
                 <li><a href="about-me.html">About me</a></li>
                 <li><a href="my-resume.html">My Resume</a></li>
                 <li><a href="nativedialogs.html">native</a></li>
-                <li><a href="customdialogs.html" class="active">custom</a></li>
-                <li><a href="crud.html">crud</a></li>
-                <li><a href="styledcrud.html">styled crud</a></li>
+                <li><a href="customdialogs.html">custom</a></li>
+                <li><a href="crud.html" class="active">crud</a></li>
+                <li><a href="styledcrud.html" class="active">styled crud</a></li>
                 <li><picture> <img src="icons/hamburger-menu.png" alt="" /> </picture></li>
             </ul>
         </nav>
     </header>
     
 	<main>
-        <button id="showAlertButton">Alert</button>
-        <button id="showConfirmButton">Confirm</button>
-        <button id="showPromptButton">Prompt</button>
-        <button id="showSaferPromptButton">Safer Prompt</button>
-        <output id="output"></output>
+        <h2>Blog Posts</h2>
+        <ul id="styledBlogPostList"></ul>
 
-        <dialog id="alertDialog">
-            <h2>Alert pressed!</h2>
+        <button id="styledAddButton">Add a blog post</button>
+
+        <dialog id="styledAddDialog">
+            <h3>Add a blog post:</h3>
             <form method="dialog">
-                <button>OK</button>
+                <label for="styledPostTitle">Post Title:</label>
+                <input type="text" name="styledPostTitle" id="styledPostTitle"></input><br>
+
+                <label for="styledPostDate">Post Date:</label>
+                <input type="text" name="styledPostDate" id="styledPostDate"></input><br>
+
+                <label for="styledPostSummary">Post summary:</label> <br>
+                <input type="text" name="styledPostSummary" id="styledPostSummary"></input> <br>
+
+                <button id="styledSubmitBlogPostButton">Submit</button>
+                <button id="styledPromptCancelButton">Cancel</button>
+                
+                <output id="output"></output>
             </form>
         </dialog>
 
-        <dialog id="confirmDialog">
-            <p>Do you confirm this?</p>
+        <dialog id="styledEditDialog">
+            <h3>Edit blog post:</h3>
             <form method="dialog">
-                <button id="confirmButton">Confirm</button>
-                <button id="cancelButton">Cancel</button>
-            </form>
-        </dialog>
+                <label for="styledEditpPostTitle">Post Title:</label>
+                <input type="text" name="styledEditpPostTitle" id="styledEditpPostTitle"></input><br>
 
-        <dialog id="promptDialog">
-            <p>What is your name:</p>
-            <form method="dialog">
-                <input type="text" name="promptInput" id="promptInput"></input>
-                <button id="promptSubmitButton">Submit</button>
-                <button id="promptCancelButton">Cancel</button>
-            </form>
-        </dialog>
+                <label for="styledEditPostDate">Post Date:</label>
+                <input type="text" name="styledEditPostDate" id="styledEditPostDate"></input><br>
 
-        <dialog id="saferPromptDialog">
-            <p>What is your name:</p>
-            <form method="dialog">
-                <input type="text" name="promptInput" id="saferPromptInput"></input>
-                <button id="saferPromptSubmitButton">Submit</button>
-                <button id="saferPromptCancelButton">Cancel</button>
+                <label for="styledEditPostSummary">Post summary:</label> <br>
+                <input type="text" name="styledEditPostSummary" id="styledEditPostSummary"></input> <br>
+ 
+                <button id="styledSubmitEditButton">Submit</button>
+                <button id="editPromptCancelButton">Cancel</button>
             </form>
         </dialog>
 
@@ -84,15 +86,13 @@
 	</footer>
 
     <script type="module">
-        import { showAlertDialog, showConfirmDialog, showPromptDialog, showSaferPromptDialog } from './customdialogs.js';
+        import { showStyledAddDialog, updateBlogPostList } from './styledblog.js';
 
         window.addEventListener('DOMContentLoaded', init);
 
         function init() {
-            document.getElementById('showAlertButton').addEventListener('click', showAlertDialog);
-            document.getElementById('showConfirmButton').addEventListener('click', showConfirmDialog);
-            document.getElementById('showPromptButton').addEventListener('click', showPromptDialog);
-            document.getElementById('showSaferPromptButton').addEventListener('click', showSaferPromptDialog);
+            document.getElementById('styledAddButton').addEventListener('click', showStyledAddDialog);
+            updateBlogPostList();
         }
     </script>
 
