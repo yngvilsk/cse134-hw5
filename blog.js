@@ -89,21 +89,19 @@ function updateBlogPostList() {
         // Create Delete button element
         let deleteButton = document.createElement("button");
         deleteButton.innerHTML = "Delete";
-        deleteButton.onclick = function() {
-            // Perform action when button is clicked:
+
+        deleteButton.addEventListener('click', function handleDeletePost(item) {
             // Remove the corresponding blog post from the array
             let index = blogPosts.indexOf(item);
             blogPosts.splice(index, 1);
             updateBlogPostList(); // Update the list to reflect the changes
-        };
+        });
 
         // Create Delete button element
         let editButton = document.createElement("button");
         editButton.innerHTML = "Edit";
-        editButton.onclick = function() {
-            showEditForm(item);
-        };
-        
+        editButton.addEventListener('click', showEditForm(item));
+
         // Append buttons to li element
         li.appendChild(deleteButton);
         li.appendChild(editButton);
@@ -113,23 +111,25 @@ function updateBlogPostList() {
 }
 
 function showEditForm(blogPost) {
+    let editDialog = document.getElementById('editBlogPostDialog');
+
     // Show the edit post dialog
-    document.getElementById('editBlogPostDialog').showModal();
+    editDialog.showModal();
 
     // Pre-fill the form fields with the values from the blogPost object
-    dialog.querySelector("#editPostTitle").value = blogPost.title;
-    dialog.querySelector("#editpPostDate").value = blogPost.date;
-    dialog.querySelector("#editPostSummary").value = blogPost.summary;
+    editDialog.querySelector("#editPostTitle").value = blogPost.title;
+    editDialog.querySelector("#editpPostDate").value = blogPost.date;
+    editDialog.querySelector("#editPostSummary").value = blogPost.summary;
     
     // Add a submit event listener to the form
     document.getElementById('editSubmitBlogPostButton').addEventListener("click", function handleEditPost() {
 
         // Update the blogPost object with the values from the form fields
-        blogPost.title = dialog.querySelector("#title").value;
-        blogPost.date = dialog.querySelector("#date").value;
-        blogPost.summary = dialog.querySelector("#summary").value;
+        blogPost.title = editDialog.querySelector("#editPostTitle").value;
+        blogPost.date = editDialog.querySelector("#editpPostDate").value;
+        blogPost.summary = editDialog.querySelector("#editPostSummary").value;
 
-        dialog.close(); // Close the dialog
+        editDialog.close(); // Close the dialog
 
         updateBlogPostList(); // Update the list to reflect the changes
     });
