@@ -98,13 +98,11 @@
 	</footer>
 
     <script type="module">
-        import { showAlertDialog, showConfirmDialog, showAddBlogPostDialog, updateBlogPostList } from './blog.js';
+        import { showAddBlogPostDialog } from './blog.js';
 
         window.addEventListener('DOMContentLoaded', init);
 
         function init() {
-            document.getElementById('editBlogPost').addEventListener('click', showAlertDialog);
-            document.getElementById('deleteBlogPost').addEventListener('click', showConfirmDialog);
             document.getElementById('addBlogPost').addEventListener('click', showAddBlogPostDialog);
             updateBlogPostList();
         }

@@ -101,10 +101,7 @@ function updateBlogPostList() {
         let editButton = document.createElement("button");
         editButton.innerHTML = "Edit";
         editButton.onclick = function() {
-            // Perform action when button is clicked:
-            // Edit corresponding blog post from the array
             showEditForm(item);
-            updateBlogPostList(); // Update the list to reflect the changes
         };
         
         // Append buttons to li element
