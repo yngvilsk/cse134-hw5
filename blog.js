@@ -90,27 +90,33 @@ function updateBlogPostList() {
         let deleteButton = document.createElement("button");
         deleteButton.innerHTML = "Delete";
 
+        // Create Edit button
+        let editButton = document.createElement("button");
+        editButton.innerHTML = "Edit";
+
+        // Append buttons to li element
+        li.appendChild(deleteButton);
+        li.appendChild(editButton);
+
+
+        // Eventlisteners for the buttons
         deleteButton.addEventListener('click', function handleDeletePost(item) {
+            console.log("Delete pressed");
             // Remove the corresponding blog post from the array
             let index = blogPosts.indexOf(item);
             blogPosts.splice(index, 1);
             updateBlogPostList(); // Update the list to reflect the changes
         });
 
-        // Create Edit button
-        let editButton = document.createElement("button");
-        editButton.innerHTML = "Edit";
         editButton.addEventListener('click', showEditForm(item));
 
-        // Append buttons to li element
-        li.appendChild(deleteButton);
-        li.appendChild(editButton);
 
         document.getElementById('blogPostList').appendChild(li);
     })
 }
 
 function showEditForm(blogPost) {
+    console.log("Edit pressed");
     let editDialog = document.getElementById('editBlogPostDialog');
 
     // Show the edit post dialog
