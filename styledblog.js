@@ -11,6 +11,7 @@ function showStyledAddDialog() {
     addDialog.style.borderWidth = '1px';
     addDialog.style.borderRadius = '10px';
 
+    /*
     const labels = dialog.getElementsByTagName('label');
     for (let i = 0; i < labels.length; i++) {
     labels[i].style.padding = '5px 0';
@@ -20,7 +21,7 @@ function showStyledAddDialog() {
     for (let i = 0; i < inputs.length; i++) {
     inputs[i].style.padding = '5px';
     }
-
+    */
     
     // Show it
     addDialog.showModal();
