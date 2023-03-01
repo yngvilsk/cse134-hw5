@@ -124,21 +124,21 @@ function updateStyledBlogPostList() {
             event.target.style.color = "";
         }, false);
 
-       // Style add button
-       addButton.style.padding = '5px';
-       addButton.style.backgroundColor = 'lightyellow';
-       addButton.style.borderColor = 'rgb(19,74,77)';
-       addButton.style.color = 'rgb(19,74,77)';
-       addButton.style.borderWidth = '1px';
-       addButton.style.borderRadius = '10px';
-       addButton.style.width = '50px'
+       // Style delete button
+       deleteButton.style.padding = '5px';
+       deleteButton.style.backgroundColor = 'lightyellow';
+       deleteButton.style.borderColor = 'rgb(19,74,77)';
+       deleteButton.style.color = 'rgb(19,74,77)';
+       deleteButton.style.borderWidth = '1px';
+       deleteButton.style.borderRadius = '10px';
+       deleteButton.style.width = '50px'
 
-       addButton.addEventListener("mouseenter", function( event ) {   
+       deleteButton.addEventListener("mouseenter", function( event ) {   
            event.target.style.color = "#EC4F3C";
            event.target.style.borderColor = "#EC4F3C";
        }, false);
        
-       addButton.addEventListener("mouseleave", function( event ) {   
+       deleteButton.addEventListener("mouseleave", function( event ) {   
            event.target.style.color = "";
        }, false);
 
