@@ -31,7 +31,7 @@
         </nav>
     </header>
     
-	<main>
+	<main id="styledBlogPostPage">
         <h2>Styled Blog Posts</h2>
         <ul id="styledBlogPostList"></ul>
 
@@ -88,15 +88,19 @@
     <script type="module">
         import { showStyledAddDialog, updateStyledBlogPostList } from './styledblog.js';
         
+        let styledPage = document.getElementById('styledBlogPostPage')
         let addButton = document.getElementById('styledAddButton');
 
         window.addEventListener('DOMContentLoaded', init);
 
+        styledPage.style.display = 'flex';
+        styledPage.style.alignItems = 'center';
+
         addButton.style.padding = '5px';
         addButton.style.backgroundColor = 'lightyellow';
         addButton.style.borderColor = 'rgb(19,74,77)';
-        addButton.style.bordRadius = '10px';
-        addButton.style.margin = 'auto';
+        addButton.style.borderWidth = '1px';
+        addButton.style.borderRadius = '10px';
 
         function init() {
             addButton.addEventListener('click', showStyledAddDialog);
