@@ -3,10 +3,12 @@ function showStyledAddDialog() {
     let addDialog = document.getElementById('styledAddDialog');
 
     // Style it
-    /*
-    addDialog.style.color = 'yellow';
-    addDialog.style.margin = '20px';
-    addDialog.style.padding = '10px';
+    
+    addDialog.style.padding = '5px';
+    addDialog.style.backgroundColor = 'lightyellow';
+    addDialog.style.borderColor = 'rgb(19,74,77)';
+    addDialog.style.color = 'rgb(19,74,77)';
+    addDialog.style.borderWidth = '1px';
     addDialog.style.borderRadius = '10px';
 
     const labels = dialog.getElementsByTagName('label');
@@ -18,7 +20,7 @@ function showStyledAddDialog() {
     for (let i = 0; i < inputs.length; i++) {
     inputs[i].style.padding = '5px';
     }
-    */
+
     
     // Show it
     addDialog.showModal();
