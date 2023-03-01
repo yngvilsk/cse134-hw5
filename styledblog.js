@@ -3,6 +3,7 @@ function showStyledAddDialog() {
     let addDialog = document.getElementById('styledAddDialog');
 
     // Style it
+    /*
     addDialog.style.color = 'yellow';
     addDialog.style.margin = '20px';
     addDialog.style.padding = '10px';
@@ -17,6 +18,7 @@ function showStyledAddDialog() {
     for (let i = 0; i < inputs.length; i++) {
     inputs[i].style.padding = '5px';
     }
+    */
     
     // Show it
     addDialog.showModal();

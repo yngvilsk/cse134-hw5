@@ -87,13 +87,19 @@
 
     <script type="module">
         import { showStyledAddDialog, updateStyledBlogPostList } from './styledblog.js';
+        
+        let addButton = document.getElementById('styledAddButton');
 
         window.addEventListener('DOMContentLoaded', init);
-        document.getElementById('styledAddButton').style.padding = '5px';
-        document.getElementById('styledAddButton').style.color = 'lightyellow';
-        document.getElementById('styledAddButton').style.borderColor = 'rgb(19,74,77)';
+
+        addButton.style.padding = '5px';
+        addButton.style.backgroundColor = 'lightyellow';
+        addButton.style.borderColor = 'rgb(19,74,77)';
+        addButton.style.bordRadius = '10px';
+        addButton.style.margin = 'auto';
+
         function init() {
-            document.getElementById('styledAddButton').addEventListener('click', showStyledAddDialog);
+            addButton.addEventListener('click', showStyledAddDialog);
             updateStyledBlogPostList();
         }
     </script>
