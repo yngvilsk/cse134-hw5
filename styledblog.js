@@ -84,7 +84,7 @@ function updateStyledBlogPostList() {
 
         // Create Delete button 
         let deleteButton = document.createElement("button");
-        deleteButton.innerHTML = "Delete";
+        deleteButton.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" height="15" fill="rgb(19,74,77)" viewBox="0 96 960 960" width="15"><path d="M261 936q-24.75 0-42.375-17.625T201 876V306h-41v-60h188v-30h264v30h188v60h-41v570q0 24-18 42t-42 18H261Zm438-630H261v570h438V306ZM367 790h60V391h-60v399Zm166 0h60V391h-60v399ZM261 306v570-570Z"/></svg>';
 
         // Create Edit button
         let editButton = document.createElement("button");
@@ -113,7 +113,7 @@ function updateStyledBlogPostList() {
         editButton.style.color = 'rgb(19,74,77)';
         editButton.style.borderWidth = '1px';
         editButton.style.borderRadius = '10px';
-        editButton.style.width = '50px'
+        editButton.style.width = '30px'
 
         editButton.addEventListener("mouseenter", function( event ) {   
             event.target.style.color = "#EC4F3C";
@@ -134,16 +134,17 @@ function updateStyledBlogPostList() {
        deleteButton.style.color = 'rgb(19,74,77)';
        deleteButton.style.borderWidth = '1px';
        deleteButton.style.borderRadius = '10px';
-       deleteButton.style.width = '50px'
+       deleteButton.style.width = '30px'
        deleteButton.style.rightMargin = '10px';
 
        deleteButton.addEventListener("mouseenter", function( event ) {   
-           event.target.style.color = "#EC4F3C";
-           event.target.style.borderColor = "#EC4F3C";
+            event.target.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" height="15" fill="#EC4F3C" viewBox="0 96 960 960" width="15"><path d="M261 936q-24.75 0-42.375-17.625T201 876V306h-41v-60h188v-30h264v30h188v60h-41v570q0 24-18 42t-42 18H261Zm438-630H261v570h438V306ZM367 790h60V391h-60v399Zm166 0h60V391h-60v399ZM261 306v570-570Z"/></svg>';
+            event.target.style.borderColor = "#EC4F3C";
        }, false);
        
        deleteButton.addEventListener("mouseleave", function( event ) {   
-           event.target.style.color = "";
+           event.target.style.borderColor = 'rgb(19,74,77)';
+           event.target.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" height="15" fill="rgb(19,74,77)" viewBox="0 96 960 960" width="15"><path d="M261 936q-24.75 0-42.375-17.625T201 876V306h-41v-60h188v-30h264v30h188v60h-41v570q0 24-18 42t-42 18H261Zm438-630H261v570h438V306ZM367 790h60V391h-60v399Zm166 0h60V391h-60v399ZM261 306v570-570Z"/></svg>';
        }, false);
 
 
