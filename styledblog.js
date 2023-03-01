@@ -106,6 +106,23 @@ function updateStyledBlogPostList() {
             showEditForm(item); 
         });
 
+        // Style edit button
+        editButton.style.padding = '5px';
+        editButton.style.backgroundColor = 'lightyellow';
+        editButton.style.borderColor = 'rgb(19,74,77)';
+        editButton.style.borderWidth = '1px';
+        editButton.style.borderRadius = '10px';
+        editButton.style.width = '70px'
+
+        editButton.addEventListener("mouseenter", function( event ) {   
+            event.target.style.color = "#EC4F3C";
+            event.target.style.borderColor = "#EC4F3C";
+        }, false);
+        
+        aditButton.addEventListener("mouseleave", function( event ) {   
+            event.target.style.color = "";
+        }, false);
+
 
         document.getElementById('styledBlogPostList').appendChild(li);
     })
