@@ -26,7 +26,7 @@ function showStyledAddDialog() {
 
 }
 
-let blogPosts = [
+let styledBlogPosts = [
     {
         'title': 'Homemade Acai Bowl',
         'date': '2023-02-03',
@@ -60,7 +60,7 @@ function handleSaferPromptSubmit() {
         let cleanPostDate = DOMPurify.sanitize(dirtyPostDate);
         let cleanPostSummary = DOMPurify.sanitize(dirtyPostSummary);
 
-        blogPosts.push(
+        styledBlogPosts.push(
             {
                 'title': cleanPostTitle,
                 'date': cleanPostDate,
@@ -68,15 +68,15 @@ function handleSaferPromptSubmit() {
             }
         );
 
-        updateBlogPostList();
+        updateStyledBlogPostList();
     }
 }
 
-function updateBlogPostList() {
+function updateStyledBlogPostList() {
     // Clear existing list to avoid duplicating it
     document.getElementById('styledBlogPostList').innerHTML = '';
 
-    blogPosts.forEach((item)=> {
+    styledBlogPosts.forEach((item)=> {
         let li = document.createElement("li");
         li.innerHTML = item.title + item.date + item.summary;
 
@@ -95,9 +95,9 @@ function updateBlogPostList() {
         // Eventlisteners for the buttons
         deleteButton.addEventListener('click', function handleDeletePost(item) {
             // Remove the corresponding blog post from the array
-            let index = blogPosts.indexOf(item);
-            blogPosts.splice(index, 1);
-            updateBlogPostList(); // Update the list to reflect the changes
+            let index = styledBlogPosts.indexOf(item);
+            styledBlogPosts.splice(index, 1);
+            updateStyledBlogPostList(); // Update the list to reflect the changes
         });
 
         editButton.addEventListener('click', function handleEditPost() { 
@@ -107,14 +107,14 @@ function updateBlogPostList() {
 
         document.getElementById('styledBlogPostList').appendChild(li);
     })
-    saveBlogPosts(); // Save the updated blogPosts array to localStorage
+    //saveBlogPosts(); // Save the updated blogPosts array to localStorage
 }
 
 function showEditForm(blogPost) {
     let editDialog = document.getElementById('styledEditDialog');
 
     // Style it
-    editDialog.style.backgroundcolor = 'yello';
+    editDialog.style.backgroundcolor = 'yellow';
     editDialog.style.margin = '20px';
     editDialog.style.padding = '10px';
     editDialog.style.borderRadius = '10px';
@@ -134,15 +134,15 @@ function showEditForm(blogPost) {
         blogPost.date = document.getElementById("styledEditPostDate").value;
         blogPost.summary = document.getElementById("styledEditPostSummary").value;
 
-        updateBlogPostList(); // Update the list to reflect the changes
+        updateStyledBlogPostList(); // Update the list to reflect the changes
     });
 }
 
 // Define saveBlogPosts function to save the blogPosts array to localStorage
 function saveBlogPosts() {
-    localStorage.setItem('blogPosts', JSON.stringify(blogPosts));
-  }
+    localStorage.setItem('styledblogPosts', JSON.stringify(styledblogPosts));
+}
 
 
 
-export { showAlertDialog, showStyledAddDialog, updateBlogPostList }
+export { showStyledAddDialog, updateStyledBlogPostList }

@@ -32,7 +32,7 @@
     </header>
     
 	<main>
-        <h2>Blog Posts</h2>
+        <h2>Styled Blog Posts</h2>
         <ul id="styledBlogPostList"></ul>
 
         <button id="styledAddButton">Add a blog post</button>
@@ -86,7 +86,7 @@
 	</footer>
 
     <script type="module">
-        import { showStyledAddDialog, updateBlogPostList } from './styledblog.js';
+        import { showStyledAddDialog, updateStyledBlogPostList } from './styledblog.js';
 
         window.addEventListener('DOMContentLoaded', init);
         document.getElementById('styledAddButton').style.padding = '5px';
@@ -94,7 +94,7 @@
         document.getElementById('styledAddButton').style.borderColor = 'rgb(19,74,77)';
         function init() {
             document.getElementById('styledAddButton').addEventListener('click', showStyledAddDialog);
-            updateBlogPostList();
+            updateStyledBlogPostList();
         }
     </script>
 
