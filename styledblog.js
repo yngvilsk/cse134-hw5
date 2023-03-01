@@ -88,7 +88,7 @@ function updateStyledBlogPostList() {
 
         // Create Edit button
         let editButton = document.createElement("button");
-        editButton.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" height="15" fill="rgb(19,74,77)" viewBox="0 96 960 960" width="15"><path d="M180 876h44l443-443-44-44-443 443v44Zm614-486L666 262l42-42q17-17 42-17t42 17l44 44q17 17 17 42t-17 42l-42 42Zm-42 42L248 936H120V808l504-504 128 128Zm-107-21-22-22 44 44-22-22Z"/></svg> Edit';
+        editButton.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" height="15" fill="rgb(19,74,77)" viewBox="0 96 960 960" width="15"><path d="M180 876h44l443-443-44-44-443 443v44Zm614-486L666 262l42-42q17-17 42-17t42 17l44 44q17 17 17 42t-17 42l-42 42Zm-42 42L248 936H120V808l504-504 128 128Zm-107-21-22-22 44 44-22-22Z"/></svg>';
 
         // Append buttons to li element
         li.appendChild(deleteButton);
@@ -113,18 +113,18 @@ function updateStyledBlogPostList() {
         editButton.style.color = 'rgb(19,74,77)';
         editButton.style.borderWidth = '1px';
         editButton.style.borderRadius = '10px';
-        editButton.style.width = '70px'
+        editButton.style.width = '50px'
 
         editButton.addEventListener("mouseenter", function( event ) {   
             event.target.style.color = "#EC4F3C";
             event.target.style.borderColor = "#EC4F3C";
-            event.target.innerHTML = editButton.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" height="15" fill="#EC4F3C" viewBox="0 96 960 960" width="15"><path d="M180 876h44l443-443-44-44-443 443v44Zm614-486L666 262l42-42q17-17 42-17t42 17l44 44q17 17 17 42t-17 42l-42 42Zm-42 42L248 936H120V808l504-504 128 128Zm-107-21-22-22 44 44-22-22Z"/></svg> Edit';
+            event.target.innerHTML ='<svg xmlns="http://www.w3.org/2000/svg" height="15" fill="#EC4F3C" viewBox="0 96 960 960" width="15"><path d="M180 876h44l443-443-44-44-443 443v44Zm614-486L666 262l42-42q17-17 42-17t42 17l44 44q17 17 17 42t-17 42l-42 42Zm-42 42L248 936H120V808l504-504 128 128Zm-107-21-22-22 44 44-22-22Z"/></svg>';
         }, false);
         
         editButton.addEventListener("mouseleave", function( event ) {   
-            event.target.style.color = "";
-            event.target.style.borderColor = "";
-            event.target.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" height="15" fill="rgb(19,74,77)" viewBox="0 96 960 960" width="15"><path d="M180 876h44l443-443-44-44-443 443v44Zm614-486L666 262l42-42q17-17 42-17t42 17l44 44q17 17 17 42t-17 42l-42 42Zm-42 42L248 936H120V808l504-504 128 128Zm-107-21-22-22 44 44-22-22Z"/></svg> Edit';
+            event.target.style.color = 'rgb(19,74,77)';
+            event.target.style.borderColor = 'rgb(19,74,77)';
+            event.target.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" height="15" fill="rgb(19,74,77)" viewBox="0 96 960 960" width="15"><path d="M180 876h44l443-443-44-44-443 443v44Zm614-486L666 262l42-42q17-17 42-17t42 17l44 44q17 17 17 42t-17 42l-42 42Zm-42 42L248 936H120V808l504-504 128 128Zm-107-21-22-22 44 44-22-22Z"/></svg>';
         }, false);
 
        // Style delete button
