@@ -132,7 +132,7 @@ function updateStyledBlogPostList() {
        deleteButton.style.borderWidth = '1px';
        deleteButton.style.borderRadius = '10px';
        deleteButton.style.width = '50px'
-       deleteButton.style.gap = '10px';
+       deleteButton.style.rightMargin = '10px';
 
        deleteButton.addEventListener("mouseenter", function( event ) {   
            event.target.style.color = "#EC4F3C";
