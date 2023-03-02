@@ -390,7 +390,11 @@ summary {
     }
     */
     .nav-links {
-        display: none;
+        left: -100%;
+    }
+
+    #hamburger-button {
+        display: visible;
     }
 
     .hamburger {
