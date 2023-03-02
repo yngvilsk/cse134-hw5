@@ -407,10 +407,6 @@ summary {
     color: #EC4F3C; 
 }
 
-.hamburger-menu.is-active{
-    display: none;
-}
-
 
 /* Media */
 @media screen and (max-width: 640px) {
@@ -424,12 +420,13 @@ summary {
     }
 
     .hamburger-menu {
+        display: hidden;
+    }
+
+    .hamburger-menu.is-active{
         display: block;
     }
 
-    .closeIcon {
-        display: none;
-    }
 
     #homepage {
         margin-top: 20px;;
