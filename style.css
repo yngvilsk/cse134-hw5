@@ -369,10 +369,9 @@ summary {
     justify-content: center;
     align-items: center;
     width: 100dvw;
-}
-.bar li {
     list-style: none;
 }
+
 .bar a{
     display: block;
     list-style-type: none;
@@ -387,7 +386,7 @@ summary {
 @media screen and (max-width: 640px) {
 
     .nav-menu li {
-        visibility: hidden;
+        display: none;
     }
 
     #hamburger-button {
