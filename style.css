@@ -43,16 +43,6 @@ nav {
     align-self: center;
 }
 
-/*
-nav > ul li:not(:last-child) { 
-    visibility: visible;
-}
-
-nav > ul li:last-child {
-    visibility: hidden;
-}
-*/
-
 .active {
     font-weight: bold;
 }
@@ -376,7 +366,6 @@ summary {
 .hamburger-menu {
     display: none;
     list-style: none;
-    align-self: flex-end;
 }
 
 .bar a{
