@@ -368,6 +368,7 @@ summary {
 .hamburger-menu {
     display: none;
     list-style: none;
+    left: 0;
 
 }
 
