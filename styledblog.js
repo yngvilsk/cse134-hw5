@@ -82,7 +82,11 @@ function updateStyledBlogPostList() {
 
     styledBlogPosts.forEach((item)=> {
         let li = document.createElement("li");
-        li.innerHTML = item.title + item.date + item.summary;
+        li.innerHTML = `
+            <h3>${item.title}</h3>
+            <p><i>${item.date}</i></p>
+            <p>${item.summary}</p>
+        `;
 
         // Create Delete button 
         let deleteButton = document.createElement("button");
