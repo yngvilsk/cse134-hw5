@@ -39,12 +39,12 @@
 
         <dialog id="styledAddDialog">
             <h3>Add a blog post:</h3>
-            <form method="dialog">
+            <form id='addForm' method="dialog">
                 <label for="styledPostTitle">Post Title:</label>
                 <input type="text" name="styledPostTitle" id="styledPostTitle"></input><br>
 
                 <label for="styledPostDate">Post Date:</label>
-                <input type="text" name="styledPostDate" id="styledPostDate"></input><br>
+                <input type="date" aria-describedby="date-format" min="2018-03-01" max="2031-01-01" name="styledPostDate" id="styledPostDate"></input><br>
 
                 <label for="styledPostSummary">Post summary:</label> <br>
                 <input type="text" name="styledPostSummary" id="styledPostSummary"></input> <br>
@@ -58,7 +58,7 @@
 
         <dialog id="styledEditDialog">
             <h3>Edit blog post:</h3>
-            <form method="dialog">
+            <form id='editForm' method="dialog">
                 <label for="styledEditpPostTitle">Post Title:</label>
                 <input type="text" name="styledEditpPostTitle" id="styledEditpPostTitle"></input><br>
 
@@ -90,6 +90,8 @@
         
         let styledPage = document.getElementById('styledBlogPostPage')
         let addButton = document.getElementById('styledAddButton');
+        let editForm = document.getElementById('editForm');
+        let addForm = document.getElementById('addForm');
 
         window.addEventListener('DOMContentLoaded', init);
 
@@ -99,7 +101,12 @@
         styledPage.style.alignItems = 'flex-start'
         styledPage.style.marginLeft = '20px';
         styledPage.style.marginRight = '20px';
-        styledPage.style.marginBottom = '20px';
+        styledPage.style.marginBottom = '20px'
+        
+        editForm.style.display = 'flex';
+        editForm.style.flexDirection= 'column';
+        editForm.style.gap = '10px';
+
 
         addButton.style.padding = '5px';
         addButton.style.backgroundColor = 'lightyellow';
