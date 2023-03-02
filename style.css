@@ -77,7 +77,6 @@ nav > ul li:last-child {
 
 .nav-menu ul li:hover::after{
     width: 100%
-
 }
 
 a:hover {
@@ -396,8 +395,7 @@ summary {
     }
 
     #hamburger-button {
-        display: block;
-        z-index: 100;
+        display: inline;
     }
 
     .hamburger-menu {
