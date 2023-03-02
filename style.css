@@ -367,8 +367,6 @@ summary {
 
 .hamburger-menu {
     display: none;
-    flex-direction: column;
-    justify-content: right;
     width: 100dvw;
     list-style: none;
 }
