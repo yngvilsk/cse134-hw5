@@ -395,13 +395,15 @@ summary {
     }
 
     #hamburger-button {
-        display: inline;
+        display: block;
         background-color: none;
         border-color: none;
+        align-self: center;
     }
 
     .hamburger-menu {
         display: block;
+        align-self: end;
     }
 
     .closeIcon {
