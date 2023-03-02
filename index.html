@@ -8,7 +8,6 @@
 	<title>Yngvil Skomedal</title> <!-- Document title is mandatory -->
     <link href="images/favicon.png" rel="icon"/>
     <link rel="stylesheet" type="text/css" href="style.css"> <!-- Link to the css file -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script>
 		console.log('Hello! Please hire me :)');
     </script>
@@ -27,24 +26,23 @@
             <h1>Yngvil Skomedal</h1>
         </section>
         <nav>
-            <ul>
+            <input type="checkbox" id="checkbox_toggle" />
+            <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+            <ul class="nav-links">
                 <li><a href="index.html" class="active">Home</a> </li>
                 <li><a href="about-me.html">About me</a></li>
                 <li><a href="my-resume.html">My Resume</a></li>
                 <li><a href="nativedialogs.html">native</a></li>
                 <li><a href="customdialogs.html">custom</a></li>
                 <li><a href="crud.html">crud</a></li>
-                <li><a href="styledcrud.html">styled crud &#9776</a></li>
-                <li><a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                    <i class="fa fa-bars"></i>
-                  </a></li>
+                <li><a href="styledcrud.html">styled crud</a></li>
             </ul>
         </nav>
     </header>
 
 	<main id="homepage">
         <section id="homepage-text">
-            <h2>Hello! &#9776</h2>
+            <h2>Hello!</h2>
             <p> My name is <span style="color:cadetblue"> Yngvil Skomedal </span>and I study <strong>Computer Science</strong>. I am <em>passionate</em> about UI. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
             <aside>
                 <p> Currently I am an exchange student at <i>UCSD</i>!</p>
@@ -70,13 +68,13 @@
 	</footer>
     <script>
         /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
-        function myFunction() {
-        var x = document.getElementsByTagName("nav");
-        if (x.className === "nav") {
-            x.className += " responsive";
-        } else {
-            x.className = "nav";
-        }
+        function openHamburgerMenu() {
+            var x = document.getElementsByTagName("nav");
+            if (x.className === "nav") {
+                x.className += " responsive";
+            } else {
+                x.className = "nav";
+            }
         }
     </script>
 
