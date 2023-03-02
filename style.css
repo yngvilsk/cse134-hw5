@@ -46,6 +46,7 @@ nav {
 
 .active {
     font-weight: bold;
+    color: #EC4F3C;
 }
 
 .nav-menu li{
