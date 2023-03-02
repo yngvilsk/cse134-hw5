@@ -28,8 +28,7 @@
         </section>
         <nav>
             <button id="hamburger-button">
-                <i class="menuIcon material-icons">menu</i>
-                <i class="closeIcon material-icons">close</i>
+                &#9776;
             </button>
             <ul class="nav-menu">
                 <li><a href="index.html" class="active">Home</a> </li>
@@ -83,10 +82,12 @@
         let hamburgerMenu = document.querySelector(".hamburger-menu");
 
         /* Toggle hamburger menu visibility when hamburger button is clicked */
-        hamburgerButton.addEventListener("click", () => {
-            hamburgerButton.classList.toggle("current");
-            hamburgerMenu.classList.toggle("current");
-        });
+        hamburgerButton.addEventListener("click", toggleMenu);
+
+        function toggleMenu() {
+            // if is-active is set remove it, otherwise add it
+            hamburgerMenu.classList.toggle("is-active");
+        }
     </script>
 
 </body>

@@ -368,10 +368,7 @@ summary {
 .hamburger-menu {
     display: none;
     list-style: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
+
 }
 
 .bar a{
@@ -384,6 +381,19 @@ summary {
     transition: all 0.3s ease-in-out;
 }
 
+.hamburger-menu.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active .bar:nth-child(1) {
+    -webkit-transform: translateY(8px) rotate(45deg);
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger-menu.active .bar:nth-child(3) {
+    -webkit-transform: translateY(-8px) rotate(-45deg);
+    transform: translateY(-8px) rotate(-45deg);
+}
 /* Media */
 @media screen and (max-width: 640px) {
 
