@@ -382,7 +382,7 @@ summary {
 }
 
 .hamburger-menu.is-active{
-    display: block;
+    display: none;
 }
 /* Media */
 @media screen and (max-width: 640px) {
