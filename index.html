@@ -26,8 +26,6 @@
             <h1>Yngvil Skomedal</h1>
         </section>
         <nav>
-            <input type="checkbox" id="checkbox_toggle" />
-            <label for="checkbox_toggle" class="hamburger">&#9776;</label>
             <ul class="nav-links">
                 <li><a href="index.html" class="active">Home</a> </li>
                 <li><a href="about-me.html">About me</a></li>
@@ -36,7 +34,17 @@
                 <li><a href="customdialogs.html">custom</a></li>
                 <li><a href="crud.html">crud</a></li>
                 <li><a href="styledcrud.html">styled crud</a></li>
+                <li>&#9776;</li>
             </ul>
+            <div class="hamburger">
+                <li class="bar"><a href="index.html" class="active">Home</a> </li>
+                <li class="bar"><a href="about-me.html">About me</a></li>
+                <li class="bar"><a href="my-resume.html">My Resume</a></li>
+                <li class="bar"><a href="nativedialogs.html">native</a></li>
+                <li class="bar"><a href="customdialogs.html">custom</a></li>
+                <li class="bar"><a href="crud.html">crud</a></li>
+                <li class="bar"><a href="styledcrud.html">styled crud</a></li>
+            </div>
         </nav>
     </header>
 
@@ -67,14 +75,23 @@
         </section>
 	</footer>
     <script>
-        /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
-        function openHamburgerMenu() {
-            var x = document.getElementsByTagName("nav");
-            if (x.className === "nav") {
-                x.className += " responsive";
-            } else {
-                x.className = "nav";
-            }
+        let hamburger = document.querySelector(".hamburger");
+        let navMenu = document.querySelector(".nav-links");
+
+        hamburger.addEventListener("click", mobileMenu);
+
+        function mobileMenu() {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        }
+
+        let navLink = document.querySelectorAll(".nav-link");
+
+        navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+        function closeMenu() {
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
         }
     </script>
 

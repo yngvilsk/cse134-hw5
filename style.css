@@ -359,13 +359,22 @@ summary {
     width: calc(30em * 0.8);
 }
 
-input[type=checkbox]{
-    display: none;
-}
-
 .hamburger {
     display: none;
     user-select: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
 }
 
 /* Media */
@@ -375,10 +384,6 @@ input[type=checkbox]{
     }
     nav > ul li:not(:last-child){
         display: none;
-    }
-
-    input[type=checkbox]:checked  ~ .nav.links{
-        display: block;
     }
 
     .hamburger {
