@@ -385,18 +385,7 @@ summary {
     display: none;
 }
 
-#hamburger-button {
-    border-color: none;
-    background-color: none;
-}
 
-.hamburger-header{
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    bottom: 0;
-    margin-top: 40px;
-}
 
 /* Media */
 @media screen and (max-width: 640px) {
