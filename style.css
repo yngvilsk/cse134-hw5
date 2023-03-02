@@ -37,6 +37,12 @@ nav {
     margin-right: 30px
 }
 
+.hamburger-yes {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
 /*
 nav > ul li:not(:last-child) { 
     visibility: visible;
