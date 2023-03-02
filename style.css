@@ -393,10 +393,12 @@ summary {
     #hamburger-button {
         display: block;
         z-index: 100;
+        right: 0;
     }
 
     .hamburger-menu {
         display: block;
+        right: 0;
     }
 
     .closeIcon {
