@@ -3,7 +3,6 @@ function showStyledAddDialog() {
     let addDialog = document.getElementById('styledAddDialog');
 
     // Style it
-    
     addDialog.style.padding = '5px';
     addDialog.style.backgroundColor = 'lightyellow';
     addDialog.style.borderColor = 'rgb(19,74,77)';
@@ -162,9 +161,11 @@ function showEditForm(blogPost) {
     let editDialog = document.getElementById('styledEditDialog');
 
     // Style it
-    editDialog.style.backgroundcolor = 'yellow';
-    editDialog.style.margin = '20px';
-    editDialog.style.padding = '10px';
+    editDialog.style.padding = '5px';
+    editDialog.style.backgroundColor = 'lightyellow';
+    editDialog.style.borderColor = 'rgb(19,74,77)';
+    editDialog.style.color = 'rgb(19,74,77)';
+    editDialog.style.borderWidth = '1px';
     editDialog.style.borderRadius = '10px';
 
     editDialog.showModal();
