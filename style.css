@@ -387,18 +387,16 @@ summary {
 @media screen and (max-width: 640px) {
 
     .nav-menu li {
-        display: none;
+        visibility: hidden;
     }
 
     #hamburger-button {
         display: block;
         z-index: 100;
-        right: 0;
     }
 
     .hamburger-menu {
         display: block;
-        right: 0;
     }
 
     .closeIcon {
