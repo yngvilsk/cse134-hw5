@@ -51,7 +51,7 @@ nav > ul li:last-child {
     font-weight: bold;
 }
 
-nav ul li{
+.nav-menu li{
     list-style-type: none; /* Removes the bullets */
     margin: 0; /* Removes browser default settings */
     padding-left: 10px;
@@ -59,13 +59,13 @@ nav ul li{
 }
 
 
-nav ul li a {
+.nav-menu a {
     text-decoration: none;
     color: rgb(205, 232, 217);
     font-family: 'Roboto', Helvetica, Arial, sans-serif; 
 }
 
-nav ul li::after {
+.nav-menu li::after {
     content: '';
     width: 0%;
     height: 2px;
@@ -75,7 +75,7 @@ nav ul li::after {
     transition: 0.5s;
 }
 
-nav ul li:hover::after{
+.nav-menu ul li:hover::after{
     width: 100%
 
 }
