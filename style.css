@@ -385,9 +385,15 @@ summary {
     display: none;
 }
 
+#hamburger-button {
+    border-color: none;
+    background-color: none;
+}
+
 .hamburger-header{
     display: flex;
     flex-direction: column;
+    align-content: center;
 }
 
 /* Media */
