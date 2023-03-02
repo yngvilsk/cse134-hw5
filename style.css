@@ -403,7 +403,7 @@ summary {
 
     .hamburger-menu {
         display: block;
-        align-self: end;
+        align-self: flex-end;
     }
 
     .closeIcon {
