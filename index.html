@@ -8,6 +8,7 @@
 	<title>Yngvil Skomedal</title> <!-- Document title is mandatory -->
     <link href="images/favicon.png" rel="icon"/>
     <link rel="stylesheet" type="text/css" href="style.css"> <!-- Link to the css file -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script>
 		console.log('Hello! Please hire me :)');
     </script>
@@ -26,7 +27,7 @@
             <h1>Yngvil Skomedal</h1>
         </section>
         <nav>
-            <ul class="nav-links">
+            <ul class="nav-menu">
                 <li><a href="index.html" class="active">Home</a> </li>
                 <li><a href="about-me.html">About me</a></li>
                 <li><a href="my-resume.html">My Resume</a></li>
@@ -35,8 +36,11 @@
                 <li><a href="crud.html">crud</a></li>
                 <li><a href="styledcrud.html">styled crud</a></li>
             </ul>
-            <button id="hamburger-button">&#9776;</button>
-            <div class="hamburger">
+            <button id="hamburger-button">
+                <i class="menuIcon">menu</i>
+                <i class="closeIcon">close</i>
+            </button>
+            <div class="hamburger-menu">
                 <li class="bar"><a href="index.html" class="active">Home</a> </li>
                 <li class="bar"><a href="about-me.html">About me</a></li>
                 <li class="bar"><a href="my-resume.html">My Resume</a></li>

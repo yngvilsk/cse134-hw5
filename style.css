@@ -363,7 +363,7 @@ summary {
     display: none;
 }
 
-.hamburger {
+.hamburger-menu {
     display: none;
     flex-direction: column;
     justify-content: center;
@@ -371,7 +371,7 @@ summary {
     width: 100dvw;
 }
 
-.bar {
+.bar a{
     display: block;
     list-style: none;
     margin: 5px auto;
@@ -389,8 +389,8 @@ summary {
         display: none;
     }
     */
-    .nav-links {
-        left: -100%;
+    .nav-menu li {
+        display: none;
     }
 
     #hamburger-button {
