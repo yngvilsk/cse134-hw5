@@ -373,8 +373,10 @@ summary {
 
 .bar a{
     display: block;
-    list-style: none;
-    margin: 5px auto;
+    list-style-type: none;
+    text-decoration: none;
+    color: rgb(205, 232, 217);
+    font-family: 'Roboto', Helvetica, Arial, sans-serif; 
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
@@ -395,7 +397,7 @@ summary {
     }
 
     #hamburger-button {
-        display: visible;
+        display: block;
         z-index: 100;
     }
 
