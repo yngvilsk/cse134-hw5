@@ -389,16 +389,22 @@ summary {
         display: none;
     }
     */
+
     .nav-menu li {
         display: none;
     }
 
     #hamburger-button {
         display: visible;
+        z-index: 100;
     }
 
-    .hamburger {
+    .hamburger-menu {
         display: block;
+    }
+
+    .closeIcon {
+        display: none;
     }
 
     #homepage {
