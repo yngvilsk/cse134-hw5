@@ -407,7 +407,6 @@ summary {
 }
 
 
-
 /* Media */
 @media screen and (max-width: 640px) {
 
@@ -418,11 +417,11 @@ summary {
     #hamburger-button {
         display: block;
     }
-
+/*
     .hamburger-menu {
         display: block;
     }
-
+*/
     .closeIcon {
         display: none;
     }
