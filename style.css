@@ -370,7 +370,9 @@ summary {
     align-items: center;
     width: 100dvw;
 }
-
+.bar li {
+    list-style: none;
+}
 .bar a{
     display: block;
     list-style-type: none;
