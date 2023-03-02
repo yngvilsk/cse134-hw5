@@ -383,14 +383,6 @@ summary {
 
 /* Media */
 @media screen and (max-width: 640px) {
-    /*
-    nav > ul li:last-child {
-      visibility: visible;
-    }
-    nav > ul li:not(:last-child){
-        display: none;
-    }
-    */
 
     .nav-menu li {
         display: none;
