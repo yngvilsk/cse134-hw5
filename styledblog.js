@@ -82,6 +82,7 @@ function updateStyledBlogPostList() {
 
     styledBlogPosts.forEach((item)=> {
         let li = document.createElement("li");
+        li.style.listStyleType = 'none';
         li.innerHTML = `
             <h3>${item.title}</h3>
             <p><i>${item.date}</i></p>
