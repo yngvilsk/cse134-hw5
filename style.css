@@ -368,6 +368,21 @@ summary {
         display: none;
     }
 
+    /* Dropdown Hamburger menu */
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        z-index: 1;
+    }
+    
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+    
+    .dropdown:focus-within .dropdown-menu {
+        display: block;
+    }
+
     #homepage {
         margin-top: 20px;;
     }
