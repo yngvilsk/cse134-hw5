@@ -396,6 +396,8 @@ summary {
 
     #hamburger-button {
         display: inline;
+        background-color: none;
+        border-color: none;
     }
 
     .hamburger-menu {
