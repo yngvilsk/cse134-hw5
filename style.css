@@ -384,6 +384,12 @@ summary {
 .hamburger-menu.is-active{
     display: none;
 }
+
+.hamburger-header{
+    display: flex;
+    flex-direction: column;
+}
+
 /* Media */
 @media screen and (max-width: 640px) {
 
