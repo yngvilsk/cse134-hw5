@@ -384,7 +384,7 @@ summary {
 /* Media */
 @media screen and (max-width: 640px) {
 
-    .nav-menu li {
+    .nav-menu {
         display: none;
     }
 
