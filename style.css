@@ -369,7 +369,6 @@ summary {
     display: none;
     background-color: none;
     border-color: none;
-    align-self: center;
     margin-top: 40px;
 }
 
@@ -426,7 +425,6 @@ summary {
     .hamburger-menu.is-active{
         display: block;
     }
-
 
     #homepage {
         margin-top: 20px;;
