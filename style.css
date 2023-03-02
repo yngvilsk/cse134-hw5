@@ -362,13 +362,15 @@ summary {
 
 #hamburger-button {
     display: none;
+    background-color: none;
+    border-color: none;
+    align-self: center;
 }
 
 .hamburger-menu {
     display: none;
     list-style: none;
-    left: 0;
-
+    align-self: flex-end;
 }
 
 .bar a{
@@ -396,14 +398,10 @@ summary {
 
     #hamburger-button {
         display: block;
-        background-color: none;
-        border-color: none;
-        align-self: center;
     }
 
     .hamburger-menu {
         display: block;
-        align-self: flex-end;
     }
 
     .closeIcon {
