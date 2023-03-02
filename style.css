@@ -37,6 +37,7 @@ nav {
     margin-right: 30px
 }
 
+/*
 nav > ul li:not(:last-child) { 
     visibility: visible;
 }
@@ -44,6 +45,7 @@ nav > ul li:not(:last-child) {
 nav > ul li:last-child {
     visibility: hidden;
 }
+*/
 
 .active {
     font-weight: bold;
