@@ -41,7 +41,7 @@ nav {
     display: flex;
     flex-direction: row;
     align-content: center;
-    gap: 5px;
+    gap: 10px;
 }
 
 .active {
