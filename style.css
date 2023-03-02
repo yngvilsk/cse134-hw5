@@ -383,6 +383,24 @@ summary {
     transition: all 0.3s ease-in-out;
 }
 
+.hamburger-menu li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #EC4F3C;
+    margin: auto;
+    display: block;
+    transition: 0.5s;
+}
+
+.hamburger-menu li:hover::after{
+    width: 100%
+}
+
+.bar a:hover {
+    color: #EC4F3C; 
+}
+
 .hamburger-menu.is-active{
     display: none;
 }
