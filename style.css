@@ -368,6 +368,10 @@ summary {
 .hamburger-menu {
     display: none;
     list-style: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
 }
 
 .bar a{
