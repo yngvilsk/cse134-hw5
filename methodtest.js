@@ -65,8 +65,16 @@ putBtn.addEventListener("click", async () => {
 /**  Delete Button */ 
 
 deleteBtn.addEventListener("click", async () => {
+    const data = {
+        id: document.getElementById("id").value,
+        article_name: document.getElementById("article_name").value,
+        article_body: document.getElementById("article_body").value,
+        date: new Date().toISOString()
+    };
+    
   const delete_response = await fetch("https://httpbin.org/delete", {
-    method: "DELETE"
+    method: "DELETE",
+    body: JSON.stringify(data),
   });
 
   const json_result = await delete_response.json();
