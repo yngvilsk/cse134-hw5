@@ -19,7 +19,7 @@ postBtn.addEventListener("click", async () => {
     date: new Date().toISOString()
   };
 
-  const response = await fetch("https://httpbin.org/post", {
+  const post_response = await fetch("https://httpbin.org/post", {
     method: "POST",
     body: JSON.stringify(data),
     headers: {
@@ -27,8 +27,8 @@ postBtn.addEventListener("click", async () => {
     }
   });
 
-  const result = await response.json();
-  console.log(result);
+  const json_result = await post_response.json();
+  showResponse(json_result);
 });
 
 /**  Get Button */ 
@@ -36,7 +36,7 @@ postBtn.addEventListener("click", async () => {
 getBtn.addEventListener("click", async () => {
   const get_response = await fetch("https://httpbin.org/get");
   const json_result = await get_response.json();
-  
+
   showResponse(json_result);
 });
 
@@ -50,7 +50,7 @@ putBtn.addEventListener("click", async () => {
     date: new Date().toISOString()
   };
 
-  const response = await fetch("https://httpbin.org/put", {
+  const put_response = await fetch("https://httpbin.org/put", {
     method: "PUT",
     body: JSON.stringify(data),
     headers: {
@@ -58,17 +58,17 @@ putBtn.addEventListener("click", async () => {
     }
   });
 
-  const result = await response.json();
-  console.log(result);
+  const json_result = await put_response.json();
+  showResponse(json_result);
 });
 
 /**  Delete Button */ 
 
 deleteBtn.addEventListener("click", async () => {
-  const response = await fetch("https://httpbin.org/delete", {
+  const delete_response = await fetch("https://httpbin.org/delete", {
     method: "DELETE"
   });
 
-  const result = await response.json();
-  console.log(result);
+  const json_result = await delete_response.json();
+  showResponse(json_result);
 });
