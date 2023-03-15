@@ -22,9 +22,6 @@ postBtn.addEventListener("click", async () => {
   const post_response = await fetch("https://httpbin.org/post", {
     method: "POST",
     body: JSON.stringify(data),
-    headers: {
-      "Content-Type": "application/json"
-    }
   });
 
   const json_result = await post_response.json();
@@ -53,9 +50,6 @@ putBtn.addEventListener("click", async () => {
   const put_response = await fetch("https://httpbin.org/put", {
     method: "PUT",
     body: JSON.stringify(data),
-    headers: {
-      "Content-Type": "application/json"
-    }
   });
 
   const json_result = await put_response.json();
