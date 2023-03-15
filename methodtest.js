@@ -21,6 +21,9 @@ postBtn.addEventListener("click", async () => {
 
   const post_response = await fetch("https://httpbin.org/post", {
     method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
     body: JSON.stringify(data),
   });
 
@@ -33,6 +36,9 @@ postBtn.addEventListener("click", async () => {
 getBtn.addEventListener("click", async () => {
   const get_response = await fetch("https://httpbin.org/get", {
     method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
     body: JSON.stringify(document.getElementById("id").value)
   });
   const json_result = await get_response.json();
@@ -52,6 +58,9 @@ putBtn.addEventListener("click", async () => {
 
   const put_response = await fetch("https://httpbin.org/put", {
     method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
     body: JSON.stringify(data),
   });
 
@@ -71,6 +80,9 @@ deleteBtn.addEventListener("click", async () => {
     
   const delete_response = await fetch("https://httpbin.org/delete", {
     method: "DELETE",
+    headers: {
+      "Content-Type": "application/json",
+    },
     body: JSON.stringify(data),
   });
 
