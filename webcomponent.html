@@ -1,0 +1,62 @@
+<!DOCTYPE html> <!-- Traditionally indicates version of HTML used (here: HTML 5) -->
+<html lang="en"> <!-- Document Root Element -->
+<!-- Info about document -->
+<head>
+	<meta charset="utf-8" /> <!-- Always set character set first -->
+	<meta name="description" content="Simple Web page for HW2 in CSE 134B" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Yngvil Skomedal</title> <!-- Document title is mandatory -->
+    <link href="images/favicon.png" rel="icon"/>
+    <link rel="stylesheet" type="text/css" href="style.css"> <!-- Link to the css file -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.0/purify.min.js" integrity="sha512-Ijc86Y/rPOFCr+CJLd0QQlEaCC9ztVJFvPzK0DMrHCJ8biDkyQoo6Ll/OmqMEOaDJ2nCgsV89402SzXnocKzZg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<!-- Document Content and Markup -->
+<body>
+	<header>
+        <section id="header-title">
+            <h1>Yngvil Skomedal</h1>
+        </section>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a> </li>
+                <li><a href="about-me.html">About me</a></li>
+                <li><a href="my-resume.html">My Resume</a></li>
+                <li><a href="methodtest.html" class="active">Method Test</a></li>
+            </ul>
+            <div class="hamburger-yes">
+                <ul class="hamburger-menu">
+                        <li class="bar"><a href="index.html">Home</a> </li>
+                        <li class="bar"><a href="about-me.html">About me</a></li>
+                        <li class="bar"><a href="my-resume.html">My Resume</a></li>
+                        <li class="bar"><a href="nativedialogs.html">native</a></li>
+                        <li class="bar"><a href="customdialogs.html">custom</a></li>
+                        <li class="bar"><a href="crud.html" class="active">crud</a></li>
+                        <li class="bar"><a href="styledcrud.html">styled crud</a></li>
+                </ul>
+                <button id="hamburger-button">
+                    &#9776;
+                </button>
+            </div>
+        </nav>
+    </header>
+    
+	<main>
+        <button-count></button-count>
+    </main>
+
+	<footer>
+        <section id="footer-contact">
+            <a href=“https://no.linkedin.com/in/yngvil-skomedal-3494821a0”>LinkedIn</a>
+            <a href="https://github.com/yngvilsk">GitHub</a>
+        </section>
+        <section id="footer-end">
+            <p>This page was made with &hearts; by Yngvil Skomedal</p>
+        </section>
+	</footer>
+
+    <script src="/ButtonCount.js"></script>
+
+</body>
+
+</html>
