@@ -8,24 +8,20 @@ class ButtonCount extends HTMLElement{
         // Attach a shadow root to the custom element.
         const shadowRoot = this.attachShadow({ mode: 'open' });
 
+        let count = 0;
+
         // Create a button element inside the shadow root.
         const button = document.createElement('button');
-        button.textContent = 'Click me!';
-
-        // Create a counter element inside the shadow root.
-        const counter = document.createElement('p');
-        counter.textContent = '0';
+        button.textContent = `Times clicked: ${count}`;
 
         // Add an event listener to the button that updates the counter.
-        let count = 0;
         button.addEventListener('click', () => {
-        count++;
-        counter.textContent = count;
+            count++;
+            button.textContent = `Times clicked: ${count}`;
         });
 
         // Add the button and counter elements to the shadow root.
         shadowRoot.appendChild(button);
-        shadowRoot.appendChild(counter);
     }
 }
 
