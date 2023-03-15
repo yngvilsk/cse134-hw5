@@ -34,13 +34,7 @@ postBtn.addEventListener("click", async () => {
 /**  Get Button */ 
 
 getBtn.addEventListener("click", async () => {
-  const get_response = await fetch("https://httpbin.org/get", {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(document.getElementById("id").value)
-  });
+  const get_response = await fetch("https://httpbin.org/get");
   const json_result = await get_response.json();
 
   showResponse(json_result);
